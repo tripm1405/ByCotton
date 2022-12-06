@@ -13,6 +13,7 @@ namespace ByCotton
         public string email;
         public Nullable<bool> gender;
         public string address;
+        public string phone;
 
         public Account()
         {
@@ -21,12 +22,14 @@ namespace ByCotton
             this.email = null;
             this.gender = null;
             this.address = null;
+            this.phone = null;
         }
     }
 
     static class Global
     {
         public static string IMAGE_PATH = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\..\\public\\images\\";
+        public static string DATABASE = "Data Source=LAPTOP-5HLVG267;Initial Catalog=BY_COTTON;Integrated Security=True";
 
         public static Account account = null;
     }

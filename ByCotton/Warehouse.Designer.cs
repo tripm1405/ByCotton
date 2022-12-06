@@ -42,47 +42,56 @@ namespace ByCotton
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.deleteProductButton = new System.Windows.Forms.Button();
-            this.getProduct = new System.Windows.Forms.Button();
-            this.removeProductButton = new System.Windows.Forms.Button();
-            this.printButton = new System.Windows.Forms.Button();
-            this.productsListView = new System.Windows.Forms.ListView();
-            this.code = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clearProductsbutton = new System.Windows.Forms.Button();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amountNumericUpDown)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // logoutButton
             // 
-            this.logoutButton.Location = new System.Drawing.Point(807, 12);
+            this.logoutButton.BackColor = System.Drawing.Color.Gray;
+            this.logoutButton.FlatAppearance.BorderSize = 0;
+            this.logoutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.ForeColor = System.Drawing.Color.White;
+            this.logoutButton.Location = new System.Drawing.Point(3, 3);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(105, 23);
+            this.logoutButton.Size = new System.Drawing.Size(109, 40);
             this.logoutButton.TabIndex = 0;
             this.logoutButton.Text = "ĐĂNG XUẤT";
-            this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // editButton
             // 
+            this.editButton.BackColor = System.Drawing.Color.Green;
+            this.editButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.editButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editButton.ForeColor = System.Drawing.Color.White;
             this.editButton.Location = new System.Drawing.Point(25, 75);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(105, 23);
+            this.editButton.Size = new System.Drawing.Size(105, 28);
             this.editButton.TabIndex = 2;
             this.editButton.Text = "SỬA SP";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // productsDataGridView
             // 
             this.productsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.productsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productsDataGridView.Location = new System.Drawing.Point(25, 105);
+            this.productsDataGridView.Location = new System.Drawing.Point(25, 109);
             this.productsDataGridView.Name = "productsDataGridView";
             this.productsDataGridView.ReadOnly = true;
             this.productsDataGridView.RowHeadersWidth = 51;
@@ -92,28 +101,38 @@ namespace ByCotton
             // 
             // clearProductButton
             // 
-            this.clearProductButton.Location = new System.Drawing.Point(701, 275);
+            this.clearProductButton.BackColor = System.Drawing.Color.Green;
+            this.clearProductButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.clearProductButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.clearProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearProductButton.ForeColor = System.Drawing.Color.White;
+            this.clearProductButton.Location = new System.Drawing.Point(680, 264);
             this.clearProductButton.Name = "clearProductButton";
-            this.clearProductButton.Size = new System.Drawing.Size(95, 23);
+            this.clearProductButton.Size = new System.Drawing.Size(95, 28);
             this.clearProductButton.TabIndex = 15;
             this.clearProductButton.Text = "ĐẶT LẠI";
-            this.clearProductButton.UseVisualStyleBackColor = true;
+            this.clearProductButton.UseVisualStyleBackColor = false;
             this.clearProductButton.Click += new System.EventHandler(this.clearProductButton_Click);
             // 
             // doneProductButton
             // 
-            this.doneProductButton.Location = new System.Drawing.Point(802, 275);
+            this.doneProductButton.BackColor = System.Drawing.Color.Green;
+            this.doneProductButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.doneProductButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.doneProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.doneProductButton.ForeColor = System.Drawing.Color.White;
+            this.doneProductButton.Location = new System.Drawing.Point(781, 264);
             this.doneProductButton.Name = "doneProductButton";
-            this.doneProductButton.Size = new System.Drawing.Size(96, 23);
+            this.doneProductButton.Size = new System.Drawing.Size(96, 28);
             this.doneProductButton.TabIndex = 14;
             this.doneProductButton.Text = "THÊM SP";
-            this.doneProductButton.UseVisualStyleBackColor = true;
+            this.doneProductButton.UseVisualStyleBackColor = false;
             this.doneProductButton.Click += new System.EventHandler(this.doneProductButton_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(644, 239);
+            this.label3.Location = new System.Drawing.Point(623, 228);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 16);
             this.label3.TabIndex = 13;
@@ -122,7 +141,7 @@ namespace ByCotton
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(597, 206);
+            this.label2.Location = new System.Drawing.Point(576, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 12;
@@ -135,7 +154,7 @@ namespace ByCotton
             0,
             0,
             0});
-            this.priceNumericUpDown.Location = new System.Drawing.Point(701, 237);
+            this.priceNumericUpDown.Location = new System.Drawing.Point(680, 226);
             this.priceNumericUpDown.Maximum = new decimal(new int[] {
             1316134912,
             2328,
@@ -147,7 +166,7 @@ namespace ByCotton
             // 
             // amountNumericUpDown
             // 
-            this.amountNumericUpDown.Location = new System.Drawing.Point(701, 200);
+            this.amountNumericUpDown.Location = new System.Drawing.Point(680, 189);
             this.amountNumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -159,7 +178,7 @@ namespace ByCotton
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(701, 162);
+            this.nameTextBox.Location = new System.Drawing.Point(680, 151);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(197, 22);
             this.nameTextBox.TabIndex = 9;
@@ -167,7 +186,7 @@ namespace ByCotton
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(638, 165);
+            this.label1.Location = new System.Drawing.Point(617, 154);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 8;
@@ -175,112 +194,113 @@ namespace ByCotton
             // 
             // deleteProductButton
             // 
+            this.deleteProductButton.BackColor = System.Drawing.Color.Red;
+            this.deleteProductButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.deleteProductButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.deleteProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteProductButton.ForeColor = System.Drawing.Color.White;
             this.deleteProductButton.Location = new System.Drawing.Point(136, 75);
             this.deleteProductButton.Name = "deleteProductButton";
-            this.deleteProductButton.Size = new System.Drawing.Size(105, 23);
+            this.deleteProductButton.Size = new System.Drawing.Size(105, 28);
             this.deleteProductButton.TabIndex = 16;
             this.deleteProductButton.Text = "XÓA SP";
-            this.deleteProductButton.UseVisualStyleBackColor = true;
+            this.deleteProductButton.UseVisualStyleBackColor = false;
             this.deleteProductButton.Click += new System.EventHandler(this.deleteProductButton_Click);
             // 
-            // getProduct
+            // button1
             // 
-            this.getProduct.Location = new System.Drawing.Point(25, 366);
-            this.getProduct.Name = "getProduct";
-            this.getProduct.Size = new System.Drawing.Size(154, 23);
-            this.getProduct.TabIndex = 17;
-            this.getProduct.Text = "THÊM SP VÀO HĐ";
-            this.getProduct.UseVisualStyleBackColor = true;
-            this.getProduct.Click += new System.EventHandler(this.getProduct_Click);
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 40);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "KHO";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // removeProductButton
+            // button2
             // 
-            this.removeProductButton.Location = new System.Drawing.Point(185, 366);
-            this.removeProductButton.Name = "removeProductButton";
-            this.removeProductButton.Size = new System.Drawing.Size(154, 23);
-            this.removeProductButton.TabIndex = 18;
-            this.removeProductButton.Text = "XÓA SP KHỎI HĐ";
-            this.removeProductButton.UseVisualStyleBackColor = true;
+            this.button2.BackColor = System.Drawing.Color.Gray;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(84, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(126, 40);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "KHÁCH HÀNG";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // printButton
+            // flowLayoutPanel1
             // 
-            this.printButton.Location = new System.Drawing.Point(701, 532);
-            this.printButton.Name = "printButton";
-            this.printButton.Size = new System.Drawing.Size(154, 23);
-            this.printButton.TabIndex = 19;
-            this.printButton.Text = "IN HĐ";
-            this.printButton.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 46);
+            this.flowLayoutPanel1.TabIndex = 19;
             // 
-            // productsListView
+            // flowLayoutPanel2
             // 
-            this.productsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.code,
-            this.name,
-            this.amount,
-            this.price});
-            this.productsListView.HideSelection = false;
-            this.productsListView.Location = new System.Drawing.Point(25, 395);
-            this.productsListView.Name = "productsListView";
-            this.productsListView.Size = new System.Drawing.Size(531, 299);
-            this.productsListView.TabIndex = 20;
-            this.productsListView.UseCompatibleStateImageBehavior = false;
-            this.productsListView.View = System.Windows.Forms.View.Details;
+            this.flowLayoutPanel2.Controls.Add(this.button1);
+            this.flowLayoutPanel2.Controls.Add(this.button2);
+            this.flowLayoutPanel2.Controls.Add(this.button3);
+            this.flowLayoutPanel2.Controls.Add(this.button4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(784, 46);
+            this.flowLayoutPanel2.TabIndex = 20;
             // 
-            // code
+            // button3
             // 
-            this.code.Text = "code";
+            this.button3.BackColor = System.Drawing.Color.Gray;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(216, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(126, 40);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "DOANH THU";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // name
+            // button4
             // 
-            this.name.Text = "name";
-            this.name.Width = 180;
+            this.button4.BackColor = System.Drawing.Color.Gray;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(348, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(126, 40);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "TRẢ HÀNG";
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // amount
+            // flowLayoutPanel3
             // 
-            this.amount.Text = "amount";
-            // 
-            // price
-            // 
-            this.price.Text = "price";
-            this.price.Width = 80;
-            // 
-            // clearProductsbutton
-            // 
-            this.clearProductsbutton.Location = new System.Drawing.Point(345, 366);
-            this.clearProductsbutton.Name = "clearProductsbutton";
-            this.clearProductsbutton.Size = new System.Drawing.Size(154, 23);
-            this.clearProductsbutton.TabIndex = 21;
-            this.clearProductsbutton.Text = "ĐẶT LẠI HĐ";
-            this.clearProductsbutton.UseVisualStyleBackColor = true;
-            // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.Location = new System.Drawing.Point(701, 504);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(197, 22);
-            this.phoneTextBox.TabIndex = 22;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(588, 507);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 16);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "SỐ ĐIỆN THOẠI:";
+            this.flowLayoutPanel3.Controls.Add(this.logoutButton);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(784, 0);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(113, 46);
+            this.flowLayoutPanel3.TabIndex = 21;
             // 
             // Warehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 706);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.phoneTextBox);
-            this.Controls.Add(this.clearProductsbutton);
-            this.Controls.Add(this.productsListView);
-            this.Controls.Add(this.printButton);
-            this.Controls.Add(this.removeProductButton);
-            this.Controls.Add(this.getProduct);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(900, 375);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.deleteProductButton);
             this.Controls.Add(this.clearProductButton);
             this.Controls.Add(this.doneProductButton);
@@ -292,7 +312,6 @@ namespace ByCotton
             this.Controls.Add(this.label1);
             this.Controls.Add(this.productsDataGridView);
             this.Controls.Add(this.editButton);
-            this.Controls.Add(this.logoutButton);
             this.Name = "Warehouse";
             this.Text = "Warehouse";
             this.Load += new System.EventHandler(this.Warehouse_Load);
@@ -300,6 +319,9 @@ namespace ByCotton
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.amountNumericUpDown)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,16 +341,12 @@ namespace ByCotton
         private TextBox nameTextBox;
         private Label label1;
         private Button deleteProductButton;
-        private Button getProduct;
-        private Button removeProductButton;
-        private Button printButton;
-        private ListView productsListView;
-        private Button clearProductsbutton;
-        private TextBox phoneTextBox;
-        private Label label4;
-        private ColumnHeader code;
-        private ColumnHeader name;
-        private ColumnHeader amount;
-        private ColumnHeader price;
+        private Button button1;
+        private Button button2;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private FlowLayoutPanel flowLayoutPanel3;
+        private Button button3;
+        private Button button4;
     }
 }

@@ -176,16 +176,5 @@ namespace ByCotton
             clearProductButton.Text = "HỦY";
             doneProductButton.Text = "SỬA";
         }
-
-        private void getProduct_Click(object sender, EventArgs e)
-        {
-            string code = productsDataGridView.CurrentRow.Cells[0].Value.ToString();
-            string name = productsDataGridView.CurrentRow.Cells[1].Value.ToString();
-            string amount = productsDataGridView.CurrentRow.Cells[2].Value.ToString();
-            string price = productsDataGridView.CurrentRow.Cells[3].Value.ToString();
-            string total = (int.Parse(amount) * int.Parse(price)).ToString();
-
-            productsListView.Items.Add(new ListViewItem(new string[] { code, name, amount, price, total }));
-        }
     }
 }

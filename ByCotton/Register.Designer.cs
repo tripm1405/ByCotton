@@ -100,7 +100,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(121, 213);
+            this.label6.Location = new System.Drawing.Point(121, 220);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 16);
             this.label6.TabIndex = 5;
@@ -183,22 +183,32 @@
             // 
             // clearButton
             // 
+            this.clearButton.BackColor = System.Drawing.Color.Green;
+            this.clearButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.clearButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.ForeColor = System.Drawing.Color.White;
             this.clearButton.Location = new System.Drawing.Point(186, 330);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(97, 23);
+            this.clearButton.Size = new System.Drawing.Size(97, 28);
             this.clearButton.TabIndex = 15;
             this.clearButton.Text = "ĐẶT LẠI";
-            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // regíterButton
             // 
+            this.regíterButton.BackColor = System.Drawing.Color.Green;
+            this.regíterButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.regíterButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.regíterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.regíterButton.ForeColor = System.Drawing.Color.White;
             this.regíterButton.Location = new System.Drawing.Point(306, 330);
             this.regíterButton.Name = "regíterButton";
-            this.regíterButton.Size = new System.Drawing.Size(102, 23);
+            this.regíterButton.Size = new System.Drawing.Size(102, 28);
             this.regíterButton.TabIndex = 16;
             this.regíterButton.Text = "ĐĂNG KÝ";
-            this.regíterButton.UseVisualStyleBackColor = true;
+            this.regíterButton.UseVisualStyleBackColor = false;
             this.regíterButton.Click += new System.EventHandler(this.regíterButton_Click);
             // 
             // genderGroupBox
@@ -213,12 +223,17 @@
             // 
             // loginButton
             // 
-            this.loginButton.Location = new System.Drawing.Point(57, 327);
+            this.loginButton.BackColor = System.Drawing.Color.Green;
+            this.loginButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.loginButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButton.ForeColor = System.Drawing.Color.White;
+            this.loginButton.Location = new System.Drawing.Point(39, 330);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(105, 23);
+            this.loginButton.Size = new System.Drawing.Size(123, 28);
             this.loginButton.TabIndex = 18;
             this.loginButton.Text = "ĐĂNG NHẬP";
-            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // phoneTextBox

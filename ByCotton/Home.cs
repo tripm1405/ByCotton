@@ -55,5 +55,17 @@ namespace ByCotton
             r.Close();
             cn.Close();
         }
+
+        private void cartButton_Click(object sender, EventArgs e)
+        {
+            (new Cart()).Show();
+            this.Hide();
+        }
+
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            (new Profile()).Show();
+            this.Hide();
+        }
     }
 }

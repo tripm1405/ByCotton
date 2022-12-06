@@ -56,22 +56,25 @@ namespace ByCotton
                 return;
             }
 
-            if (username.Equals("admin") || username.Equals("direct"))
+            if (username.Equals("manager") || username.Equals("employee"))
             {
                 MessageBox.Show("Hãy sử dụng TÀI KHOẢN khác!");
                 return;
             }
 
-            string query =
+            string query;
+
+            SqlConnection cn = new SqlConnection(Global.DATABASE);
+            cn.Open();
+
+            query =
                 "SELECT * " +
                 "FROM Account " +
                 "WHERE username = @username";
 
             SqlCommand cmd = null;
-            SqlConnection cn = new SqlConnection("Data Source=LAPTOP-5HLVG267;Initial Catalog=BY_COTTON;Integrated Security=True");
             cmd = new SqlCommand(query, cn);
             cmd.Parameters.AddWithValue("@username", username);
-            cn.Open();
             SqlDataReader r = cmd.ExecuteReader();
 
             if (r.Read())
@@ -81,11 +84,11 @@ namespace ByCotton
             }
             r.Close();
 
-            string query1 =
+            query =
                 "INSERT INTO Account(username, password, name, email, gender, address, create_at) VALUES " +
                 "(@username, @password, @name, @email, @gender, @address, @date)";
 
-            cmd = new SqlCommand(query1, cn);
+            cmd = new SqlCommand(query, cn);
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.AddWithValue("@name", name);
@@ -95,11 +98,11 @@ namespace ByCotton
             cmd.Parameters.AddWithValue("@date", DateTime.Now.ToString("yyyy-MM-dd hh:mm"));
             cmd.ExecuteReader().Close();
 
-            string query2 =
+            query =
                 "INSERT INTO Customer(account, phone) VALUES " +
                 "(@username, @phone)";
 
-            cmd = new SqlCommand(query2, cn);
+            cmd = new SqlCommand(query, cn);
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@phone", phone);
             cmd.ExecuteReader().Close();
