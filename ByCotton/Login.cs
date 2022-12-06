@@ -60,7 +60,7 @@ namespace ByCotton
             }
 
             string query =
-                "SELECT A.password, A.username, A.name, A.email, A.gender, A.address, C.phone " +
+                "SELECT A.password, A.username, ISNULL(A.name, ''), ISNULL(A.email, ''), ISNULL(A.gender, 0), ISNULL(A.address, ''), C.phone " +
                 "FROM Customer C " +
                 "INNER JOIN ( " +
                     "SELECT * " +
