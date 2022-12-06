@@ -42,14 +42,12 @@ namespace ByCotton
             listView.LargeImageList = imageList;
             while (r.Read())
             {
-                //MessageBox.Show(
-                //    r.GetInt32(0).ToString() + "\n" +
-                //    r.GetString(1) + "\n" +
-                //    r.GetString(2));
-                imageList.Images.Add(r.GetInt32(0).ToString(), Image.FromFile(Global.IMAGE_PATH + r.GetString(2)));
+                string code = r.GetInt32(0).ToString();
+
+                imageList.Images.Add(code, Image.FromFile(Global.IMAGE_PATH + r.GetString(2)));
 
                 ListViewItem listViewItem0 = listView.Items.Add(new ListViewItem(r.GetString(1)));
-                listViewItem0.ImageKey = r.GetInt32(0).ToString();
+                listViewItem0.ImageKey = code;
             }
 
             r.Close();
@@ -65,6 +63,12 @@ namespace ByCotton
         private void profileButton_Click(object sender, EventArgs e)
         {
             (new Profile()).Show();
+            this.Hide();
+        }
+
+        private void listView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            (new ProductDetail(listView.SelectedItems[0].ImageKey)).Show();
             this.Hide();
         }
     }

@@ -35,6 +35,14 @@
             this.prodileButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.listView = new System.Windows.Forms.ListView();
+            this.codeColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.nameColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.amountColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.priceColumnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label1 = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
+            this.orderButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -129,18 +137,98 @@
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
+            // listView
+            // 
+            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.codeColumnHeader,
+            this.nameColumnHeader,
+            this.amountColumnHeader,
+            this.priceColumnHeader});
+            this.listView.FullRowSelect = true;
+            this.listView.HideSelection = false;
+            this.listView.Location = new System.Drawing.Point(12, 60);
+            this.listView.MultiSelect = false;
+            this.listView.Name = "listView";
+            this.listView.Size = new System.Drawing.Size(876, 303);
+            this.listView.TabIndex = 24;
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Details;
+            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
+            // 
+            // codeColumnHeader
+            // 
+            this.codeColumnHeader.Tag = "";
+            this.codeColumnHeader.Text = "Mã";
+            // 
+            // nameColumnHeader
+            // 
+            this.nameColumnHeader.Text = "Tên";
+            this.nameColumnHeader.Width = 180;
+            // 
+            // amountColumnHeader
+            // 
+            this.amountColumnHeader.Text = "Số lượng";
+            this.amountColumnHeader.Width = 120;
+            // 
+            // priceColumnHeader
+            // 
+            this.priceColumnHeader.Text = "Giá";
+            this.priceColumnHeader.Width = 180;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 377);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "TỔNG:";
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Location = new System.Drawing.Point(70, 377);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(51, 16);
+            this.totalLabel.TabIndex = 26;
+            this.totalLabel.Text = "TOTAL";
+            // 
+            // orderButton
+            // 
+            this.orderButton.BackColor = System.Drawing.Color.Green;
+            this.orderButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.orderButton.FlatAppearance.BorderSize = 0;
+            this.orderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.orderButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.orderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orderButton.ForeColor = System.Drawing.Color.White;
+            this.orderButton.Location = new System.Drawing.Point(12, 405);
+            this.orderButton.Margin = new System.Windows.Forms.Padding(0);
+            this.orderButton.Name = "orderButton";
+            this.orderButton.Size = new System.Drawing.Size(133, 24);
+            this.orderButton.TabIndex = 27;
+            this.orderButton.Text = "ĐẶT HÀNG";
+            this.orderButton.UseVisualStyleBackColor = false;
+            this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Controls.Add(this.orderButton);
+            this.Controls.Add(this.totalLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listView);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Cart";
             this.Text = "Cart";
+            this.Load += new System.EventHandler(this.Cart_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -153,5 +241,13 @@
         private System.Windows.Forms.Button cartButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.ListView listView;
+        private System.Windows.Forms.ColumnHeader codeColumnHeader;
+        private System.Windows.Forms.ColumnHeader nameColumnHeader;
+        private System.Windows.Forms.ColumnHeader amountColumnHeader;
+        private System.Windows.Forms.ColumnHeader priceColumnHeader;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Button orderButton;
     }
 }

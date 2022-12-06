@@ -25,7 +25,7 @@ namespace ByCotton
 
             if (username.Equals("") || password.Equals(""))
             {
-                MessageBox.Show("Hãy nhập đủ thông tin!");
+                MessageBox.Show("HÃY NHẬP ĐỦ THÔNG TIN!");
                 return;
             }
 

@@ -210,5 +210,5 @@ INSERT INTO InvoiceDetail(invoice, product, amount, price, refund) VALUES
 (4, 2, 1, 38500, 1)
 GO
 
-SELECT * FROM Product
+SELECT * FROM InvoiceDetail
 GO

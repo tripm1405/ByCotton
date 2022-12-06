@@ -44,11 +44,12 @@
             // listView
             // 
             this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(12, 114);
+            this.listView.Location = new System.Drawing.Point(0, 45);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(1011, 547);
+            this.listView.Size = new System.Drawing.Size(1035, 493);
             this.listView.TabIndex = 1;
             this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.SelectedIndexChanged += new System.EventHandler(this.listView_SelectedIndexChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -143,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 682);
+            this.ClientSize = new System.Drawing.Size(1035, 538);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.listView);
             this.Name = "Home";
