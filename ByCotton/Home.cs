@@ -32,7 +32,7 @@ namespace ByCotton
         {
             string query = "SELECT code, name, image FROM Product";
 
-            SqlConnection cn = new SqlConnection("Data Source=LAPTOP-5HLVG267;Initial Catalog=BY_COTTON;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(Global.DATABASE);
             SqlCommand cmd = new SqlCommand(query, cn);
             cn.Open();
             SqlDataReader r = cmd.ExecuteReader();

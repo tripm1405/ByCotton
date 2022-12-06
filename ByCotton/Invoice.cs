@@ -33,7 +33,7 @@ namespace ByCotton
         private void loadData()
         {
             string query = "SELECT code, name, amount, price FROM Product";
-            SqlConnection cn = new SqlConnection("Data Source=LAPTOP-5HLVG267;Initial Catalog=BY_COTTON;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(Global.DATABASE);
             cn.Open();
             SqlCommand cmd = new SqlCommand(query, cn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);

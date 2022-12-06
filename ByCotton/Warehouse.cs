@@ -59,7 +59,7 @@ namespace ByCotton
             }
 
 
-            SqlConnection cn = new SqlConnection("Data Source=LAPTOP-5HLVG267;Initial Catalog=BY_COTTON;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(Global.DATABASE);
             SqlCommand cmd;
             if (editCode != -1)
             {
@@ -112,7 +112,7 @@ namespace ByCotton
             }
 
             SqlCommand cmd;
-            SqlConnection cn = new SqlConnection("Data Source=LAPTOP-5HLVG267;Initial Catalog=BY_COTTON;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(Global.DATABASE);
             cn.Open();
 
             string query1 =
@@ -144,7 +144,7 @@ namespace ByCotton
         private void loadData()
         {
             string query = "SELECT code, name, amount, price FROM Product";
-            SqlConnection cn = new SqlConnection("Data Source=LAPTOP-5HLVG267;Initial Catalog=BY_COTTON;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(Global.DATABASE);
             cn.Open();
             SqlCommand cmd = new SqlCommand(query, cn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
