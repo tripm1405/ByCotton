@@ -42,12 +42,12 @@ namespace ByCotton
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.deleteProductButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.warehouseButton = new System.Windows.Forms.Button();
+            this.customerButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.turnoverButton = new System.Windows.Forms.Button();
+            this.refundButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNumericUpDown)).BeginInit();
@@ -207,32 +207,33 @@ namespace ByCotton
             this.deleteProductButton.UseVisualStyleBackColor = false;
             this.deleteProductButton.Click += new System.EventHandler(this.deleteProductButton_Click);
             // 
-            // button1
+            // warehouseButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 40);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "KHO";
-            this.button1.UseVisualStyleBackColor = false;
+            this.warehouseButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.warehouseButton.FlatAppearance.BorderSize = 0;
+            this.warehouseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.warehouseButton.ForeColor = System.Drawing.Color.White;
+            this.warehouseButton.Location = new System.Drawing.Point(3, 3);
+            this.warehouseButton.Name = "warehouseButton";
+            this.warehouseButton.Size = new System.Drawing.Size(75, 40);
+            this.warehouseButton.TabIndex = 17;
+            this.warehouseButton.Text = "KHO";
+            this.warehouseButton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // customerButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(84, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 40);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "KHÁCH HÀNG";
-            this.button2.UseVisualStyleBackColor = false;
+            this.customerButton.BackColor = System.Drawing.Color.Gray;
+            this.customerButton.FlatAppearance.BorderSize = 0;
+            this.customerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customerButton.ForeColor = System.Drawing.Color.White;
+            this.customerButton.Location = new System.Drawing.Point(84, 3);
+            this.customerButton.Name = "customerButton";
+            this.customerButton.Size = new System.Drawing.Size(126, 40);
+            this.customerButton.TabIndex = 18;
+            this.customerButton.Text = "KHÁCH HÀNG";
+            this.customerButton.UseVisualStyleBackColor = false;
+            this.customerButton.Click += new System.EventHandler(this.customerButton_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -247,43 +248,45 @@ namespace ByCotton
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.button1);
-            this.flowLayoutPanel2.Controls.Add(this.button2);
-            this.flowLayoutPanel2.Controls.Add(this.button3);
-            this.flowLayoutPanel2.Controls.Add(this.button4);
+            this.flowLayoutPanel2.Controls.Add(this.warehouseButton);
+            this.flowLayoutPanel2.Controls.Add(this.customerButton);
+            this.flowLayoutPanel2.Controls.Add(this.turnoverButton);
+            this.flowLayoutPanel2.Controls.Add(this.refundButton);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(784, 46);
             this.flowLayoutPanel2.TabIndex = 20;
             // 
-            // button3
+            // turnoverButton
             // 
-            this.button3.BackColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(216, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(126, 40);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "DOANH THU";
-            this.button3.UseVisualStyleBackColor = false;
+            this.turnoverButton.BackColor = System.Drawing.Color.Gray;
+            this.turnoverButton.FlatAppearance.BorderSize = 0;
+            this.turnoverButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.turnoverButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.turnoverButton.ForeColor = System.Drawing.Color.White;
+            this.turnoverButton.Location = new System.Drawing.Point(216, 3);
+            this.turnoverButton.Name = "turnoverButton";
+            this.turnoverButton.Size = new System.Drawing.Size(126, 40);
+            this.turnoverButton.TabIndex = 19;
+            this.turnoverButton.Text = "DOANH THU";
+            this.turnoverButton.UseVisualStyleBackColor = false;
+            this.turnoverButton.Click += new System.EventHandler(this.turnoverButton_Click);
             // 
-            // button4
+            // refundButton
             // 
-            this.button4.BackColor = System.Drawing.Color.Gray;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(348, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(126, 40);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "TRẢ HÀNG";
-            this.button4.UseVisualStyleBackColor = false;
+            this.refundButton.BackColor = System.Drawing.Color.Gray;
+            this.refundButton.FlatAppearance.BorderSize = 0;
+            this.refundButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.refundButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refundButton.ForeColor = System.Drawing.Color.White;
+            this.refundButton.Location = new System.Drawing.Point(348, 3);
+            this.refundButton.Name = "refundButton";
+            this.refundButton.Size = new System.Drawing.Size(126, 40);
+            this.refundButton.TabIndex = 20;
+            this.refundButton.Text = "TRẢ HÀNG";
+            this.refundButton.UseVisualStyleBackColor = false;
+            this.refundButton.Click += new System.EventHandler(this.refundButton_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -341,12 +344,12 @@ namespace ByCotton
         private TextBox nameTextBox;
         private Label label1;
         private Button deleteProductButton;
-        private Button button1;
-        private Button button2;
+        private Button warehouseButton;
+        private Button customerButton;
         private FlowLayoutPanel flowLayoutPanel1;
         private FlowLayoutPanel flowLayoutPanel2;
         private FlowLayoutPanel flowLayoutPanel3;
-        private Button button3;
-        private Button button4;
+        private Button turnoverButton;
+        private Button refundButton;
     }
 }

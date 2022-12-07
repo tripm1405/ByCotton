@@ -176,5 +176,23 @@ namespace ByCotton
             clearProductButton.Text = "HỦY";
             doneProductButton.Text = "SỬA";
         }
+
+        private void customerButton_Click(object sender, EventArgs e)
+        {
+            (new CustomerManager()).Show();
+            this.Hide();
+        }
+
+        private void turnoverButton_Click(object sender, EventArgs e)
+        {
+            (new Turnover()).Show();
+            this.Hide();
+        }
+
+        private void refundButton_Click(object sender, EventArgs e)
+        {
+            (new RefundManager()).Show();
+            this.Hide();
+        }
     }
 }

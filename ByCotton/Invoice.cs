@@ -42,5 +42,17 @@ namespace ByCotton
             productsDataGridView.DataSource = ds.Tables["Product"].DefaultView;
             cn.Close();
         }
+
+        private void refundButton_Click(object sender, EventArgs e)
+        {
+            (new Refund()).Show();
+            this.Hide();
+        }
+
+        private void customerButton_Click(object sender, EventArgs e)
+        {
+            (new Customer()).Show();
+            this.Hide();
+        }
     }
 }
