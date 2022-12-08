@@ -34,8 +34,28 @@
             this.customerButton = new System.Windows.Forms.Button();
             this.turnoverButton = new System.Windows.Forms.Button();
             this.refundButton = new System.Windows.Forms.Button();
+            this.invoiceHítoryButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.yearLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.monthlabel = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.day1Label = new System.Windows.Forms.Label();
+            this.day2Label = new System.Windows.Forms.Label();
+            this.day3Label = new System.Windows.Forms.Label();
+            this.day4Label = new System.Windows.Forms.Label();
+            this.day5Label = new System.Windows.Forms.Label();
+            this.day6Label = new System.Windows.Forms.Label();
+            this.day7Label = new System.Windows.Forms.Label();
+            this.day7ValueLabel = new System.Windows.Forms.Label();
+            this.day6ValueLabel = new System.Windows.Forms.Label();
+            this.day5ValueLabel = new System.Windows.Forms.Label();
+            this.day4ValueLabel = new System.Windows.Forms.Label();
+            this.day3ValueLabel = new System.Windows.Forms.Label();
+            this.day2ValueLabel = new System.Windows.Forms.Label();
+            this.day1ValueLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -58,6 +78,7 @@
             this.flowLayoutPanel2.Controls.Add(this.customerButton);
             this.flowLayoutPanel2.Controls.Add(this.turnoverButton);
             this.flowLayoutPanel2.Controls.Add(this.refundButton);
+            this.flowLayoutPanel2.Controls.Add(this.invoiceHítoryButton);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -122,6 +143,21 @@
             this.refundButton.UseVisualStyleBackColor = false;
             this.refundButton.Click += new System.EventHandler(this.refundButton_Click);
             // 
+            // invoiceHítoryButton
+            // 
+            this.invoiceHítoryButton.BackColor = System.Drawing.Color.Gray;
+            this.invoiceHítoryButton.FlatAppearance.BorderSize = 0;
+            this.invoiceHítoryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.invoiceHítoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.invoiceHítoryButton.ForeColor = System.Drawing.Color.White;
+            this.invoiceHítoryButton.Location = new System.Drawing.Point(480, 3);
+            this.invoiceHítoryButton.Name = "invoiceHítoryButton";
+            this.invoiceHítoryButton.Size = new System.Drawing.Size(175, 40);
+            this.invoiceHítoryButton.TabIndex = 22;
+            this.invoiceHítoryButton.Text = "LỊCH SỬ HÓA ĐƠN";
+            this.invoiceHítoryButton.UseVisualStyleBackColor = false;
+            this.invoiceHítoryButton.Click += new System.EventHandler(this.invoiceHítoryButton_Click);
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.logoutButton);
@@ -145,18 +181,210 @@
             this.logoutButton.Text = "ĐĂNG XUẤT";
             this.logoutButton.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "DOANH THU NĂM HIỆN TẠI:";
+            // 
+            // yearLabel
+            // 
+            this.yearLabel.AutoSize = true;
+            this.yearLabel.Location = new System.Drawing.Point(213, 82);
+            this.yearLabel.Name = "yearLabel";
+            this.yearLabel.Size = new System.Drawing.Size(84, 16);
+            this.yearLabel.TabIndex = 22;
+            this.yearLabel.Text = "TURNOVER";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(193, 16);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "DOANH THU THÁNG TRƯỚC:";
+            // 
+            // monthlabel
+            // 
+            this.monthlabel.AutoSize = true;
+            this.monthlabel.Location = new System.Drawing.Point(239, 119);
+            this.monthlabel.Name = "monthlabel";
+            this.monthlabel.Size = new System.Drawing.Size(84, 16);
+            this.monthlabel.TabIndex = 24;
+            this.monthlabel.Text = "TURNOVER";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 158);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(204, 16);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "DOANH THU 7 NGÀY GẦN ĐÂY:";
+            // 
+            // day1Label
+            // 
+            this.day1Label.AutoSize = true;
+            this.day1Label.Location = new System.Drawing.Point(113, 199);
+            this.day1Label.Name = "day1Label";
+            this.day1Label.Size = new System.Drawing.Size(44, 16);
+            this.day1Label.TabIndex = 26;
+            this.day1Label.Text = "label2";
+            // 
+            // day2Label
+            // 
+            this.day2Label.AutoSize = true;
+            this.day2Label.Location = new System.Drawing.Point(113, 231);
+            this.day2Label.Name = "day2Label";
+            this.day2Label.Size = new System.Drawing.Size(44, 16);
+            this.day2Label.TabIndex = 27;
+            this.day2Label.Text = "label5";
+            // 
+            // day3Label
+            // 
+            this.day3Label.AutoSize = true;
+            this.day3Label.Location = new System.Drawing.Point(113, 263);
+            this.day3Label.Name = "day3Label";
+            this.day3Label.Size = new System.Drawing.Size(44, 16);
+            this.day3Label.TabIndex = 28;
+            this.day3Label.Text = "label6";
+            // 
+            // day4Label
+            // 
+            this.day4Label.AutoSize = true;
+            this.day4Label.Location = new System.Drawing.Point(113, 295);
+            this.day4Label.Name = "day4Label";
+            this.day4Label.Size = new System.Drawing.Size(44, 16);
+            this.day4Label.TabIndex = 29;
+            this.day4Label.Text = "label7";
+            // 
+            // day5Label
+            // 
+            this.day5Label.AutoSize = true;
+            this.day5Label.Location = new System.Drawing.Point(113, 327);
+            this.day5Label.Name = "day5Label";
+            this.day5Label.Size = new System.Drawing.Size(44, 16);
+            this.day5Label.TabIndex = 30;
+            this.day5Label.Text = "label8";
+            // 
+            // day6Label
+            // 
+            this.day6Label.AutoSize = true;
+            this.day6Label.Location = new System.Drawing.Point(113, 359);
+            this.day6Label.Name = "day6Label";
+            this.day6Label.Size = new System.Drawing.Size(44, 16);
+            this.day6Label.TabIndex = 31;
+            this.day6Label.Text = "label9";
+            // 
+            // day7Label
+            // 
+            this.day7Label.AutoSize = true;
+            this.day7Label.Location = new System.Drawing.Point(113, 391);
+            this.day7Label.Name = "day7Label";
+            this.day7Label.Size = new System.Drawing.Size(51, 16);
+            this.day7Label.TabIndex = 32;
+            this.day7Label.Text = "label10";
+            // 
+            // day7ValueLabel
+            // 
+            this.day7ValueLabel.AutoSize = true;
+            this.day7ValueLabel.Location = new System.Drawing.Point(324, 391);
+            this.day7ValueLabel.Name = "day7ValueLabel";
+            this.day7ValueLabel.Size = new System.Drawing.Size(51, 16);
+            this.day7ValueLabel.TabIndex = 39;
+            this.day7ValueLabel.Text = "label11";
+            // 
+            // day6ValueLabel
+            // 
+            this.day6ValueLabel.AutoSize = true;
+            this.day6ValueLabel.Location = new System.Drawing.Point(324, 359);
+            this.day6ValueLabel.Name = "day6ValueLabel";
+            this.day6ValueLabel.Size = new System.Drawing.Size(51, 16);
+            this.day6ValueLabel.TabIndex = 38;
+            this.day6ValueLabel.Text = "label12";
+            // 
+            // day5ValueLabel
+            // 
+            this.day5ValueLabel.AutoSize = true;
+            this.day5ValueLabel.Location = new System.Drawing.Point(324, 327);
+            this.day5ValueLabel.Name = "day5ValueLabel";
+            this.day5ValueLabel.Size = new System.Drawing.Size(51, 16);
+            this.day5ValueLabel.TabIndex = 37;
+            this.day5ValueLabel.Text = "label13";
+            // 
+            // day4ValueLabel
+            // 
+            this.day4ValueLabel.AutoSize = true;
+            this.day4ValueLabel.Location = new System.Drawing.Point(324, 295);
+            this.day4ValueLabel.Name = "day4ValueLabel";
+            this.day4ValueLabel.Size = new System.Drawing.Size(51, 16);
+            this.day4ValueLabel.TabIndex = 36;
+            this.day4ValueLabel.Text = "label14";
+            // 
+            // day3ValueLabel
+            // 
+            this.day3ValueLabel.AutoSize = true;
+            this.day3ValueLabel.Location = new System.Drawing.Point(324, 263);
+            this.day3ValueLabel.Name = "day3ValueLabel";
+            this.day3ValueLabel.Size = new System.Drawing.Size(51, 16);
+            this.day3ValueLabel.TabIndex = 35;
+            this.day3ValueLabel.Text = "label15";
+            // 
+            // day2ValueLabel
+            // 
+            this.day2ValueLabel.AutoSize = true;
+            this.day2ValueLabel.Location = new System.Drawing.Point(324, 231);
+            this.day2ValueLabel.Name = "day2ValueLabel";
+            this.day2ValueLabel.Size = new System.Drawing.Size(51, 16);
+            this.day2ValueLabel.TabIndex = 34;
+            this.day2ValueLabel.Text = "label16";
+            // 
+            // day1ValueLabel
+            // 
+            this.day1ValueLabel.AutoSize = true;
+            this.day1ValueLabel.Location = new System.Drawing.Point(324, 199);
+            this.day1ValueLabel.Name = "day1ValueLabel";
+            this.day1ValueLabel.Size = new System.Drawing.Size(51, 16);
+            this.day1ValueLabel.TabIndex = 33;
+            this.day1ValueLabel.Text = "label17";
+            // 
             // Turnover
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.ClientSize = new System.Drawing.Size(900, 628);
+            this.Controls.Add(this.day7ValueLabel);
+            this.Controls.Add(this.day6ValueLabel);
+            this.Controls.Add(this.day5ValueLabel);
+            this.Controls.Add(this.day4ValueLabel);
+            this.Controls.Add(this.day3ValueLabel);
+            this.Controls.Add(this.day2ValueLabel);
+            this.Controls.Add(this.day1ValueLabel);
+            this.Controls.Add(this.day7Label);
+            this.Controls.Add(this.day6Label);
+            this.Controls.Add(this.day5Label);
+            this.Controls.Add(this.day4Label);
+            this.Controls.Add(this.day3Label);
+            this.Controls.Add(this.day2Label);
+            this.Controls.Add(this.day1Label);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.monthlabel);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.yearLabel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Turnover";
             this.Text = "Turnover";
+            this.Load += new System.EventHandler(this.yearLabel_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -170,5 +398,25 @@
         private System.Windows.Forms.Button refundButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button invoiceHítoryButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label yearLabel;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label monthlabel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label day1Label;
+        private System.Windows.Forms.Label day2Label;
+        private System.Windows.Forms.Label day3Label;
+        private System.Windows.Forms.Label day4Label;
+        private System.Windows.Forms.Label day5Label;
+        private System.Windows.Forms.Label day6Label;
+        private System.Windows.Forms.Label day7Label;
+        private System.Windows.Forms.Label day7ValueLabel;
+        private System.Windows.Forms.Label day6ValueLabel;
+        private System.Windows.Forms.Label day5ValueLabel;
+        private System.Windows.Forms.Label day4ValueLabel;
+        private System.Windows.Forms.Label day3ValueLabel;
+        private System.Windows.Forms.Label day2ValueLabel;
+        private System.Windows.Forms.Label day1ValueLabel;
     }
 }

@@ -49,6 +49,7 @@ namespace ByCotton
             this.turnoverButton = new System.Windows.Forms.Button();
             this.refundButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.invoiceHítoryButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amountNumericUpDown)).BeginInit();
@@ -252,6 +253,7 @@ namespace ByCotton
             this.flowLayoutPanel2.Controls.Add(this.customerButton);
             this.flowLayoutPanel2.Controls.Add(this.turnoverButton);
             this.flowLayoutPanel2.Controls.Add(this.refundButton);
+            this.flowLayoutPanel2.Controls.Add(this.invoiceHítoryButton);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -296,6 +298,21 @@ namespace ByCotton
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(113, 46);
             this.flowLayoutPanel3.TabIndex = 21;
+            // 
+            // invoiceHítoryButton
+            // 
+            this.invoiceHítoryButton.BackColor = System.Drawing.Color.Gray;
+            this.invoiceHítoryButton.FlatAppearance.BorderSize = 0;
+            this.invoiceHítoryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.invoiceHítoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.invoiceHítoryButton.ForeColor = System.Drawing.Color.White;
+            this.invoiceHítoryButton.Location = new System.Drawing.Point(480, 3);
+            this.invoiceHítoryButton.Name = "invoiceHítoryButton";
+            this.invoiceHítoryButton.Size = new System.Drawing.Size(175, 40);
+            this.invoiceHítoryButton.TabIndex = 21;
+            this.invoiceHítoryButton.Text = "LỊCH SỬ HÓA ĐƠN";
+            this.invoiceHítoryButton.UseVisualStyleBackColor = false;
+            this.invoiceHítoryButton.Click += new System.EventHandler(this.invoiceHítoryButton_Click);
             // 
             // Warehouse
             // 
@@ -351,5 +368,6 @@ namespace ByCotton
         private FlowLayoutPanel flowLayoutPanel3;
         private Button turnoverButton;
         private Button refundButton;
+        private Button invoiceHítoryButton;
     }
 }

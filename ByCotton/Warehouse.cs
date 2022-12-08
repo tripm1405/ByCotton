@@ -194,5 +194,11 @@ namespace ByCotton
             (new RefundManager()).Show();
             this.Hide();
         }
+
+        private void invoiceHítoryButton_Click(object sender, EventArgs e)
+        {
+            (new InvoiceHistoryManger()).Show();
+            this.Hide();
+        }
     }
 }

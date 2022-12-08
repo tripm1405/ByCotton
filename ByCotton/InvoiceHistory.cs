@@ -11,22 +11,29 @@ using System.Windows.Forms;
 
 namespace ByCotton
 {
-    public partial class CustomerManager : Form
+    public partial class InvoiceHistory : Form
     {
-        public CustomerManager()
+        public InvoiceHistory()
         {
             InitializeComponent();
         }
 
         private void loadData()
         {
+            string INVOICE_DETAIL =
+                "SELECT invoice, SUM(amount*price) AS price " +
+                "FROM InvoiceDetail " + 
+                "GROUP BY invoice";
+
             SqlConnection cn = new SqlConnection(Global.DATABASE);
             cn.Open();
 
             string query =
-                "SELECT C.phone, A.username, A.email, A.name, A.address " +
-                "FROM Account A " +
-                "JOIN Customer C ON C.account = A.username";
+                "SELECT I.*, ID.price " +
+                "FROM Invoice I " +
+                "JOIN ( " +
+                    INVOICE_DETAIL +
+                ") ID ON ID.invoice = I.code";
             SqlCommand cmd = new SqlCommand(query, cn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
@@ -36,33 +43,27 @@ namespace ByCotton
             cn.Close();
         }
 
-        private void warehouseButton_Click(object sender, EventArgs e)
+        private void InvoiceHistory_Load(object sender, EventArgs e)
         {
-            (new CustomerManager()).Show();
-            this.Hide();
+            loadData();
         }
 
-        private void turnoverButton_Click(object sender, EventArgs e)
+        private void invoiceButton_Click(object sender, EventArgs e)
         {
-            (new Turnover()).Show();
+            (new Invoice()).Show();
             this.Hide();
         }
 
         private void refundButton_Click(object sender, EventArgs e)
         {
-            (new RefundManager()).Show();
+            (new Refund()).Show();
             this.Hide();
         }
 
-        private void invoiceHítoryButton_Click(object sender, EventArgs e)
+        private void customerButton_Click(object sender, EventArgs e)
         {
-            (new InvoiceHistoryManger()).Show();
+            (new Customer()).Show();
             this.Hide();
-        }
-
-        private void CustomerManager_Load(object sender, EventArgs e)
-        {
-            loadData();
         }
     }
 }

@@ -83,6 +83,18 @@
     <Compile Include="Invoice.Designer.cs">
       <DependentUpon>Invoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="InvoiceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceHistory.Designer.cs">
+      <DependentUpon>InvoiceHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceHistoryManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceHistoryManger.Designer.cs">
+      <DependentUpon>InvoiceHistoryManger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +180,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceHistory.resx">
+      <DependentUpon>InvoiceHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceHistoryManger.resx">
+      <DependentUpon>InvoiceHistoryManger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

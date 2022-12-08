@@ -62,6 +62,7 @@ DROP TABLE IF EXISTS Refund
 GO
 CREATE TABLE Refund (
 	code INT IDENTITY(1, 1),
+	amount INT,
 	price INT,
 	create_at DATETIME,
 
@@ -115,14 +116,43 @@ END
 GO
 
 -- CREATE PROCEDURE
+DROP PROC IF EXISTS invoiceInsert
+GO
 CREATE PROC invoiceInsert (@code INT, @customer VARCHAR(16))
 AS
 BEGIN
 	INSERT INTO Invoice (code, customer, create_at) VALUES
 	(@code, @customer, GETDATE());
 END
+GO
 
 -- CREATE FUNCTION
+DROP FUNCTION IF EXISTS turnover_d
+GO
+CREATE FUNCTION turnover_d(@d DATE)
+RETURNS TABLE
+AS
+RETURN (
+	SELECT ISNULL(SUM(amount * price), 0) as total
+	FROM InvoiceDetail ID
+	JOIN Invoice I ON I.code = ID.invoice
+	WHERE create_at = @d
+)
+GO
+
+DROP FUNCTION IF EXISTS turnover_s
+GO
+CREATE FUNCTION turnover_s(@s DATE, @e DATE)
+RETURNS TABLE
+AS
+RETURN (
+	SELECT ISNULL(SUM(amount * price), 0) as total
+	FROM InvoiceDetail ID
+	JOIN Invoice I ON I.code = ID.invoice
+	WHERE create_at >= @s AND create_at < @e
+)
+GO
+
 DROP FUNCTION IF EXISTS invoiceCreate
 GO
 CREATE FUNCTION invoiceCreate(@customer VARCHAR(16))
@@ -184,8 +214,8 @@ INSERT INTO Invoice(code, customer, create_at) VALUES
 (4, '03326532549', '2022/11/08 15:12')
 GO
 
-INSERT INTO Refund(price, create_at) VALUES
-(35000, '2022/11/10 11:28')
+INSERT INTO Refund(amount, price, create_at) VALUES
+(1, 35000, '2022/11/10 11:28')
 GO
 
 INSERT INTO InvoiceDetail(invoice, product, amount, price, refund) VALUES

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,24 @@ namespace ByCotton
             InitializeComponent();
         }
 
+        private void loadData()
+        {
+            SqlConnection cn = new SqlConnection(Global.DATABASE);
+            cn.Open();
+
+            string query =
+                "SELECT C.phone, A.username, A.email, A.name, A.address " +
+                "FROM Account A " +
+                "JOIN Customer C ON C.account = A.username";
+            SqlCommand cmd = new SqlCommand(query, cn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Account");
+            dataGridView.DataSource = ds.Tables["Account"].DefaultView;
+
+            cn.Close();
+        }
+
         private void invoiceButton_Click(object sender, EventArgs e)
         {
             (new Invoice()).Show();
@@ -27,6 +46,17 @@ namespace ByCotton
         {
             (new Refund()).Show();
             this.Hide();
+        }
+
+        private void invoiceHistoryButton_Click(object sender, EventArgs e)
+        {
+            (new InvoiceHistory()).Show();
+            this.Hide();
+        }
+
+        private void Customer_Load(object sender, EventArgs e)
+        {
+            loadData();
         }
     }
 }

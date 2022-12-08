@@ -33,11 +33,14 @@
             this.invoiceButton = new System.Windows.Forms.Button();
             this.refundButton = new System.Windows.Forms.Button();
             this.customerButton = new System.Windows.Forms.Button();
+            this.invoiceHistoryButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -56,6 +59,7 @@
             this.flowLayoutPanel2.Controls.Add(this.invoiceButton);
             this.flowLayoutPanel2.Controls.Add(this.refundButton);
             this.flowLayoutPanel2.Controls.Add(this.customerButton);
+            this.flowLayoutPanel2.Controls.Add(this.invoiceHistoryButton);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -105,6 +109,21 @@
             this.customerButton.Text = "KHÁCH HÀNG";
             this.customerButton.UseVisualStyleBackColor = false;
             // 
+            // invoiceHistoryButton
+            // 
+            this.invoiceHistoryButton.BackColor = System.Drawing.Color.Gray;
+            this.invoiceHistoryButton.FlatAppearance.BorderSize = 0;
+            this.invoiceHistoryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.invoiceHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.invoiceHistoryButton.ForeColor = System.Drawing.Color.White;
+            this.invoiceHistoryButton.Location = new System.Drawing.Point(376, 3);
+            this.invoiceHistoryButton.Name = "invoiceHistoryButton";
+            this.invoiceHistoryButton.Size = new System.Drawing.Size(176, 40);
+            this.invoiceHistoryButton.TabIndex = 32;
+            this.invoiceHistoryButton.Text = "LỊCH SỬ HÓA ĐƠN";
+            this.invoiceHistoryButton.UseVisualStyleBackColor = false;
+            this.invoiceHistoryButton.Click += new System.EventHandler(this.invoiceHistoryButton_Click);
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.logoutButton);
@@ -128,17 +147,31 @@
             this.logoutButton.Text = "ĐĂNG XUẤT";
             this.logoutButton.UseVisualStyleBackColor = false;
             // 
+            // dataGridView
+            // 
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(12, 63);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.Size = new System.Drawing.Size(876, 375);
+            this.dataGridView.TabIndex = 22;
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Customer";
             this.Text = "Customer";
+            this.Load += new System.EventHandler(this.Customer_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -152,5 +185,7 @@
         private System.Windows.Forms.Button customerButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Button invoiceHistoryButton;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

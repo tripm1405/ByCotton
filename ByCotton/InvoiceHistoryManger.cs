@@ -11,28 +11,34 @@ using System.Windows.Forms;
 
 namespace ByCotton
 {
-    public partial class RefundManager : Form
+    public partial class InvoiceHistoryManger : Form
     {
-        public RefundManager()
+        public InvoiceHistoryManger()
         {
             InitializeComponent();
         }
 
         private void loadData()
         {
+            string INVOICE_DETAIL =
+                "SELECT invoice, SUM(amount*price) AS price " +
+                "FROM InvoiceDetail " +
+                "GROUP BY invoice";
+
             SqlConnection cn = new SqlConnection(Global.DATABASE);
             cn.Open();
 
             string query =
-                "SELECT I.invoice, P.name, R.* " +
-                "FROM Refund R " +
-                "JOIN InvoiceDetail I ON I.refund = R.code " +
-                "JOIN Product P ON P.code = I.product";
+                "SELECT I.*, ID.price " +
+                "FROM Invoice I " +
+                "JOIN ( " +
+                    INVOICE_DETAIL +
+                ") ID ON ID.invoice = I.code";
             SqlCommand cmd = new SqlCommand(query, cn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-            da.Fill(ds, "Refund");
-            dataGridView.DataSource = ds.Tables["Refund"].DefaultView;
+            da.Fill(ds, "Account");
+            dataGridView.DataSource = ds.Tables["Account"].DefaultView;
 
             cn.Close();
         }
@@ -51,17 +57,17 @@ namespace ByCotton
 
         private void turnoverButton_Click(object sender, EventArgs e)
         {
-            (new Turnover()).Show(); 
+            (new Turnover()).Show();
             this.Hide();
         }
 
-        private void invoiceHítoryButton_Click(object sender, EventArgs e)
+        private void refundButton_Click(object sender, EventArgs e)
         {
-            (new InvoiceHistoryManger()).Show();
+            (new RefundManager()).Show();
             this.Hide();
         }
 
-        private void RefundManager_Load(object sender, EventArgs e)
+        private void InvoiceHistoryManger_Load(object sender, EventArgs e)
         {
             loadData();
         }
