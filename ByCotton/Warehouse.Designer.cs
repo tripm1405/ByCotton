@@ -48,14 +48,18 @@ namespace ByCotton
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.turnoverButton = new System.Windows.Forms.Button();
             this.refundButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.invoiceHítoryButton = new System.Windows.Forms.Button();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.imageButton = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.productsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amountNumericUpDown)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // logoutButton
@@ -97,7 +101,7 @@ namespace ByCotton
             this.productsDataGridView.ReadOnly = true;
             this.productsDataGridView.RowHeadersWidth = 51;
             this.productsDataGridView.RowTemplate.Height = 24;
-            this.productsDataGridView.Size = new System.Drawing.Size(531, 255);
+            this.productsDataGridView.Size = new System.Drawing.Size(531, 340);
             this.productsDataGridView.TabIndex = 3;
             // 
             // clearProductButton
@@ -107,7 +111,7 @@ namespace ByCotton
             this.clearProductButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.clearProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clearProductButton.ForeColor = System.Drawing.Color.White;
-            this.clearProductButton.Location = new System.Drawing.Point(680, 264);
+            this.clearProductButton.Location = new System.Drawing.Point(691, 421);
             this.clearProductButton.Name = "clearProductButton";
             this.clearProductButton.Size = new System.Drawing.Size(95, 28);
             this.clearProductButton.TabIndex = 15;
@@ -122,7 +126,7 @@ namespace ByCotton
             this.doneProductButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.doneProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.doneProductButton.ForeColor = System.Drawing.Color.White;
-            this.doneProductButton.Location = new System.Drawing.Point(781, 264);
+            this.doneProductButton.Location = new System.Drawing.Point(792, 421);
             this.doneProductButton.Name = "doneProductButton";
             this.doneProductButton.Size = new System.Drawing.Size(96, 28);
             this.doneProductButton.TabIndex = 14;
@@ -133,7 +137,7 @@ namespace ByCotton
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(623, 228);
+            this.label3.Location = new System.Drawing.Point(634, 385);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 16);
             this.label3.TabIndex = 13;
@@ -142,7 +146,7 @@ namespace ByCotton
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(576, 195);
+            this.label2.Location = new System.Drawing.Point(587, 352);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 12;
@@ -155,7 +159,7 @@ namespace ByCotton
             0,
             0,
             0});
-            this.priceNumericUpDown.Location = new System.Drawing.Point(680, 226);
+            this.priceNumericUpDown.Location = new System.Drawing.Point(691, 383);
             this.priceNumericUpDown.Maximum = new decimal(new int[] {
             1316134912,
             2328,
@@ -167,7 +171,7 @@ namespace ByCotton
             // 
             // amountNumericUpDown
             // 
-            this.amountNumericUpDown.Location = new System.Drawing.Point(680, 189);
+            this.amountNumericUpDown.Location = new System.Drawing.Point(691, 346);
             this.amountNumericUpDown.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -179,7 +183,7 @@ namespace ByCotton
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(680, 151);
+            this.nameTextBox.Location = new System.Drawing.Point(691, 308);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(197, 22);
             this.nameTextBox.TabIndex = 9;
@@ -187,7 +191,7 @@ namespace ByCotton
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(617, 154);
+            this.label1.Location = new System.Drawing.Point(628, 311);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 8;
@@ -290,15 +294,6 @@ namespace ByCotton
             this.refundButton.UseVisualStyleBackColor = false;
             this.refundButton.Click += new System.EventHandler(this.refundButton_Click);
             // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Controls.Add(this.logoutButton);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(784, 0);
-            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(113, 46);
-            this.flowLayoutPanel3.TabIndex = 21;
-            // 
             // invoiceHítoryButton
             // 
             this.invoiceHítoryButton.BackColor = System.Drawing.Color.Gray;
@@ -314,12 +309,50 @@ namespace ByCotton
             this.invoiceHítoryButton.UseVisualStyleBackColor = false;
             this.invoiceHítoryButton.Click += new System.EventHandler(this.invoiceHítoryButton_Click);
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.logoutButton);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(784, 0);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(113, 46);
+            this.flowLayoutPanel3.TabIndex = 21;
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(691, 109);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox.TabIndex = 20;
+            this.pictureBox.TabStop = false;
+            // 
+            // imageButton
+            // 
+            this.imageButton.BackColor = System.Drawing.Color.Green;
+            this.imageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.imageButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.imageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imageButton.ForeColor = System.Drawing.Color.White;
+            this.imageButton.Location = new System.Drawing.Point(691, 265);
+            this.imageButton.Name = "imageButton";
+            this.imageButton.Size = new System.Drawing.Size(150, 28);
+            this.imageButton.TabIndex = 21;
+            this.imageButton.Text = "CHỌN ẢNH";
+            this.imageButton.UseVisualStyleBackColor = false;
+            this.imageButton.Click += new System.EventHandler(this.imageButton_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
             // Warehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(900, 375);
+            this.ClientSize = new System.Drawing.Size(900, 464);
+            this.Controls.Add(this.imageButton);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.deleteProductButton);
             this.Controls.Add(this.clearProductButton);
@@ -342,6 +375,7 @@ namespace ByCotton
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,5 +403,8 @@ namespace ByCotton
         private Button turnoverButton;
         private Button refundButton;
         private Button invoiceHítoryButton;
+        private PictureBox pictureBox;
+        private Button imageButton;
+        private OpenFileDialog openFileDialog;
     }
 }
