@@ -145,6 +145,7 @@
             this.logoutButton.TabIndex = 0;
             this.logoutButton.Text = "ĐĂNG XUẤT";
             this.logoutButton.UseVisualStyleBackColor = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // dataGridView
             // 

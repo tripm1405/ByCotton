@@ -65,5 +65,12 @@ namespace ByCotton
             (new Customer()).Show();
             this.Hide();
         }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            Global.account = null;
+            (new Login()).Show();
+            this.Hide();
+        }
     }
 }

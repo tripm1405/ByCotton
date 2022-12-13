@@ -114,5 +114,12 @@ namespace ByCotton
             day7Label.Text = dateTime.AddDays(-7).ToString("dd/MM/yyyy");
             day7ValueLabel.Text = get_total_d(dateTime.AddDays(-7).ToString("yyyy/MM/dd"));
         }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            Global.account = null;
+            (new Login()).Show();
+            this.Hide();
+        }
     }
 }
