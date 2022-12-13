@@ -108,5 +108,10 @@ namespace ByCotton
             (new Register()).Show();
             this.Hide();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            logoPictureBox.Image = Image.FromFile(Global.IMAGE_PATH + "logo.png");
+        }
     }
 }
