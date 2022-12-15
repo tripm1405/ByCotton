@@ -33,6 +33,65 @@ namespace ByCotton
         public string image;
         public int price;
     }
+    
+    class Validation
+    {
+        //check khoảng trắng
+        public Boolean checkSpace(String s)
+        {
+            if(s.Trim() == "")
+            {
+                return false;
+            }
+            return true;
+        }
+        //check độ dài
+        public Boolean checkLength(String s)
+        {
+            if (s.Length < 6)
+            {
+                return false;
+            }
+            return true;
+        }
+        //check email
+        public Boolean checkEmail(String s)
+        {
+
+            string strRegex = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
+
+            Regex re = new Regex(strRegex, RegexOptions.IgnoreCase);
+
+            if (re.IsMatch(s))
+                return (true);
+            else
+                return (false);
+        
+        }
+
+        //check sdt
+        public Boolean checkPhoneNumber(String s)
+        {
+            string strRegex = @"(^[0-9]{10}$)|(^\+[0-9]{2}\s+[0-9]
+                {2}[0-9]{8}$)|(^[0-9]{3}-[0-9]{4}-[0-9]{4}$)";
+             Regex re = new Regex(strRegex);
+            if (re.IsMatch(s))
+                return (true);
+            else
+                return (false);
+        }
+        //check tất cả là số
+        public Boolean checkAllNumbers(String s)
+        {
+            string strRegex = @"^-?[0-9][0-9,\.]+$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(s))
+                return (true);
+            else
+                return (false);
+        }
+       
+    }
 
     static class Global
     {
