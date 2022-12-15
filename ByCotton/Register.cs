@@ -63,7 +63,8 @@ namespace ByCotton
             }
 
             string query;
-
+            SqlDataReader r;
+            SqlCommand cmd;
             SqlConnection cn = new SqlConnection(Global.DATABASE);
             cn.Open();
 
@@ -71,15 +72,28 @@ namespace ByCotton
                 "SELECT * " +
                 "FROM Account " +
                 "WHERE username = @username";
-
-            SqlCommand cmd = null;
             cmd = new SqlCommand(query, cn);
             cmd.Parameters.AddWithValue("@username", username);
-            SqlDataReader r = cmd.ExecuteReader();
+            r = cmd.ExecuteReader();
 
             if (r.Read())
             {
                 MessageBox.Show("Hãy sử dụng TÀI KHOẢN khác!");
+                return;
+            }
+            r.Close();
+
+            query =
+                "SELECT * " +
+                "FROM Customer " +
+                "WHERE phone = @phone";
+            cmd = new SqlCommand(query, cn);
+            cmd.Parameters.AddWithValue("@phone", phone);
+            r = cmd.ExecuteReader();
+
+            if (r.Read())
+            {
+                MessageBox.Show("HÃY SỬ DỤNG SỐ ĐIÊN THOẠI KHÁC!");
                 return;
             }
             r.Close();
