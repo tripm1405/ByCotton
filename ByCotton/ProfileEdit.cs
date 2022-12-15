@@ -154,5 +154,15 @@ namespace ByCotton
             (new Profile()).Show();
             this.Hide();
         }
+
+        private void maleRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

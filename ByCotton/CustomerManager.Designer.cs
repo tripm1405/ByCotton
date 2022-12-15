@@ -52,7 +52,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 46);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(675, 37);
             this.flowLayoutPanel1.TabIndex = 20;
             // 
             // flowLayoutPanel2
@@ -65,7 +65,7 @@
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(784, 46);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(588, 37);
             this.flowLayoutPanel2.TabIndex = 20;
             // 
             // warehouseButton
@@ -75,9 +75,10 @@
             this.warehouseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.warehouseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.warehouseButton.ForeColor = System.Drawing.Color.White;
-            this.warehouseButton.Location = new System.Drawing.Point(3, 3);
+            this.warehouseButton.Location = new System.Drawing.Point(2, 2);
+            this.warehouseButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.warehouseButton.Name = "warehouseButton";
-            this.warehouseButton.Size = new System.Drawing.Size(75, 40);
+            this.warehouseButton.Size = new System.Drawing.Size(56, 32);
             this.warehouseButton.TabIndex = 17;
             this.warehouseButton.Text = "KHO";
             this.warehouseButton.UseVisualStyleBackColor = false;
@@ -89,9 +90,10 @@
             this.customerButton.FlatAppearance.BorderSize = 0;
             this.customerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customerButton.ForeColor = System.Drawing.Color.White;
-            this.customerButton.Location = new System.Drawing.Point(84, 3);
+            this.customerButton.Location = new System.Drawing.Point(62, 2);
+            this.customerButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customerButton.Name = "customerButton";
-            this.customerButton.Size = new System.Drawing.Size(126, 40);
+            this.customerButton.Size = new System.Drawing.Size(94, 32);
             this.customerButton.TabIndex = 18;
             this.customerButton.Text = "KHÁCH HÀNG";
             this.customerButton.UseVisualStyleBackColor = false;
@@ -103,9 +105,10 @@
             this.turnoverButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.turnoverButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.turnoverButton.ForeColor = System.Drawing.Color.White;
-            this.turnoverButton.Location = new System.Drawing.Point(216, 3);
+            this.turnoverButton.Location = new System.Drawing.Point(160, 2);
+            this.turnoverButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.turnoverButton.Name = "turnoverButton";
-            this.turnoverButton.Size = new System.Drawing.Size(126, 40);
+            this.turnoverButton.Size = new System.Drawing.Size(94, 32);
             this.turnoverButton.TabIndex = 19;
             this.turnoverButton.Text = "DOANH THU";
             this.turnoverButton.UseVisualStyleBackColor = false;
@@ -118,9 +121,10 @@
             this.refundButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.refundButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refundButton.ForeColor = System.Drawing.Color.White;
-            this.refundButton.Location = new System.Drawing.Point(348, 3);
+            this.refundButton.Location = new System.Drawing.Point(258, 2);
+            this.refundButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.refundButton.Name = "refundButton";
-            this.refundButton.Size = new System.Drawing.Size(126, 40);
+            this.refundButton.Size = new System.Drawing.Size(94, 32);
             this.refundButton.TabIndex = 20;
             this.refundButton.Text = "TRẢ HÀNG";
             this.refundButton.UseVisualStyleBackColor = false;
@@ -133,9 +137,10 @@
             this.invoiceHítoryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.invoiceHítoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.invoiceHítoryButton.ForeColor = System.Drawing.Color.White;
-            this.invoiceHítoryButton.Location = new System.Drawing.Point(480, 3);
+            this.invoiceHítoryButton.Location = new System.Drawing.Point(356, 2);
+            this.invoiceHítoryButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.invoiceHítoryButton.Name = "invoiceHítoryButton";
-            this.invoiceHítoryButton.Size = new System.Drawing.Size(175, 40);
+            this.invoiceHítoryButton.Size = new System.Drawing.Size(131, 32);
             this.invoiceHítoryButton.TabIndex = 22;
             this.invoiceHítoryButton.Text = "LỊCH SỬ HÓA ĐƠN";
             this.invoiceHítoryButton.UseVisualStyleBackColor = false;
@@ -144,10 +149,10 @@
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.logoutButton);
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(784, 0);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(588, 0);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(113, 46);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(85, 37);
             this.flowLayoutPanel3.TabIndex = 21;
             // 
             // logoutButton
@@ -157,9 +162,10 @@
             this.logoutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutButton.ForeColor = System.Drawing.Color.White;
-            this.logoutButton.Location = new System.Drawing.Point(3, 3);
+            this.logoutButton.Location = new System.Drawing.Point(2, 2);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(109, 40);
+            this.logoutButton.Size = new System.Drawing.Size(82, 32);
             this.logoutButton.TabIndex = 0;
             this.logoutButton.Text = "ĐĂNG XUẤT";
             this.logoutButton.UseVisualStyleBackColor = false;
@@ -169,20 +175,22 @@
             // 
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 61);
+            this.dataGridView.Location = new System.Drawing.Point(9, 50);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(876, 377);
+            this.dataGridView.Size = new System.Drawing.Size(657, 306);
             this.dataGridView.TabIndex = 21;
             // 
             // CustomerManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.ClientSize = new System.Drawing.Size(675, 366);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CustomerManager";
             this.Text = "CustomerManager";
             this.Load += new System.EventHandler(this.CustomerManager_Load);

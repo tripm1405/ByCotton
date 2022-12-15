@@ -113,10 +113,10 @@
             this.confirmButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.confirmButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confirmButton.ForeColor = System.Drawing.Color.White;
-            this.confirmButton.Location = new System.Drawing.Point(515, 363);
+            this.confirmButton.Location = new System.Drawing.Point(515, 358);
             this.confirmButton.Margin = new System.Windows.Forms.Padding(0);
             this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(82, 20);
+            this.confirmButton.Size = new System.Drawing.Size(88, 29);
             this.confirmButton.TabIndex = 6;
             this.confirmButton.Text = "XÁC NHẬN";
             this.confirmButton.UseVisualStyleBackColor = false;
