@@ -23,11 +23,32 @@ namespace ByCotton
             string username = usernameTextBox.Text.Trim();
             string password = passwordTextBox.Text.Trim();
 
-            if (username.Equals("") || password.Equals(""))
+            Validation valid = new Validation();
+
+            Boolean flag = true ;
+
+
+            flag &= valid.checkSpace(username);
+            if (flag == false)
             {
-                MessageBox.Show("HÃY NHẬP ĐỦ THÔNG TIN!");
+                MessageBox.Show("Hãy nhập tài khoản!");
                 return;
             }
+
+            flag &= valid.checkLength(username);
+            if (flag == false)
+            {
+                MessageBox.Show("Tài khoản có độ dài quá ngắn!");
+                return;
+            }
+
+
+            flag &= valid.checkSpace(password);
+             if (flag == false)
+             {
+                 MessageBox.Show("Hãy nhập mật khẩu!");
+                 return;
+             }
 
             if (username.Equals("manager"))
             {
@@ -76,13 +97,13 @@ namespace ByCotton
 
             if ( !r.Read() )
             {
-                MessageBox.Show("TÀI KHOẢN hoặc MẬT KHẨU KHÔNG CHÍNH XÁC");
+                MessageBox.Show("Tài khoản không tồn tại trong hệ thống");
                 return;
             }
 
             if (!password.Equals(r.GetString(0)))
             {
-                MessageBox.Show("TÀI KHOẢN hoặc MẬT KHẨU KHÔNG CHÍNH XÁC");
+                MessageBox.Show("Sai mật khẩu");
                 return;
             }
 

@@ -37,22 +37,89 @@ namespace ByCotton
             string address = addressTextBox.Text;
             string phone = phoneTextBox.Text;
 
-            if (username.Equals("") || 
-                password.Equals("") || 
-                rePassword.Equals("") || 
-                name.Equals("") || 
-                email.Equals("") || 
-                gender == null || 
-                address.Equals("") ||
-                phone.Equals(""))
+           Validation valid = new Validation();
+
+            Boolean flag = true;
+            //check space
+            flag &= valid.checkSpace(username);
+            if (flag == false)
             {
-                MessageBox.Show("Hãy điền đầy đủ thông tin!");
+                MessageBox.Show("Hãy nhập tài khoản!");
+                return;
+            }
+            flag &= valid.checkLength(username);
+            if (flag == false)
+            {
+                MessageBox.Show("Tài khoản có độ dài quá ngắn!");
                 return;
             }
 
+            flag &= valid.checkSpace(password);
+            if (flag == false)
+            {
+                MessageBox.Show("Hãy nhập mật khẩu!");
+                return;
+            }
+            flag &= valid.checkLength(password);
+            if (flag == false)
+            {
+                MessageBox.Show("Mật khẩu có độ dài quá ngắn!");
+                return;
+            }
+            flag &= valid.checkSpace(rePassword);
+            if (flag == false)
+            {
+                MessageBox.Show("Hãy nhập mật khẩu xác nhận!");
+                return;
+            }
             if (!rePassword.Equals(password))
             {
-                MessageBox.Show("NHẬP LẠI MẬT KHẨU không chính xác!");
+                MessageBox.Show("Mật khẩu xác nhận không chính xác!");
+                return;
+            }
+            flag &= valid.checkSpace(name);
+            if (flag == false)
+            {
+                MessageBox.Show("Hãy nhập tên!");
+                return;
+            }
+            flag &= valid.checkLength(name);
+            if (flag == false)
+            {
+                MessageBox.Show("Tên có độ dài quá ngắn!");
+                return;
+            }
+           
+
+            flag &= valid.checkSpace(email);
+            if (flag == false)
+            {
+                MessageBox.Show("Hãy nhập email!");
+                return;
+            }
+            flag &= valid.checkEmail(email);
+            if (flag == false)
+            {
+                MessageBox.Show("Email sai định dạng!");
+                return;
+            }
+            flag &= valid.checkSpace(address);
+            if (flag == false)
+            {
+                MessageBox.Show("Hãy nhập địa chỉ!");
+                return;
+            }
+            flag &= valid.checkSpace(phone);
+            if (flag == false)
+            {
+                MessageBox.Show("Hãy nhập số điện thoại!");
+                return;
+            }
+
+            flag &= valid.checkPhoneNumber(phone);
+            if (flag == false)
+            {
+                MessageBox.Show("Số điện thoại sai định dạng!");
                 return;
             }
 
