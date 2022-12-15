@@ -11,46 +11,40 @@ using System.Windows.Forms;
 
 namespace ByCotton
 {
-    public partial class InvoiceHistory : Form
+    public partial class InvoiceDetail : Form
     {
-        public InvoiceHistory()
+        public InvoiceDetail()
         {
             InitializeComponent();
         }
 
-        private void loadData()
-        {
-            string INVOICE_DETAIL =
-                "SELECT invoice, SUM(amount*price) AS price " +
-                "FROM InvoiceDetail " + 
-                "GROUP BY invoice";
-
-            SqlConnection cn = new SqlConnection(Global.DATABASE);
-            cn.Open();
-
-            string query =
-                "SELECT I.*, ID.price " +
-                "FROM Invoice I " +
-                "JOIN ( " +
-                    INVOICE_DETAIL +
-                ") ID ON ID.invoice = I.code";
-            SqlCommand cmd = new SqlCommand(query, cn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Account");
-            dataGridView.DataSource = ds.Tables["Account"].DefaultView;
-
-            cn.Close();
-        }
-
-        private void InvoiceHistory_Load(object sender, EventArgs e)
+        private void InvoiceDetail_Load(object sender, EventArgs e)
         {
             loadData();
         }
 
+        private void loadData()
+        {
+            string query =
+                "SELECT code, invoice, amount, price, (amount * price) AS total " +
+                "FROM InvoiceDetail " +
+                "WHERE invoice = @invoice ";
+
+            SqlConnection cn = new SqlConnection(Global.DATABASE);
+            cn.Open();
+            SqlCommand cmd = new SqlCommand(query, cn);
+            cmd.Parameters.AddWithValue("@invoice", Global.invoiceID);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "InvoiceDetail");
+            dataGridView.DataSource = ds.Tables["InvoiceDetail"].DefaultView;
+
+            cn.Close();
+        }
+
         private void invoiceButton_Click(object sender, EventArgs e)
         {
-            (new Invoice()).Show();
+            (new InvoiceHistory()).Show();
             this.Hide();
         }
 
@@ -66,6 +60,12 @@ namespace ByCotton
             this.Hide();
         }
 
+        private void invoiceHistoryButton_Click(object sender, EventArgs e)
+        {
+            (new InvoiceHistory()).Show();
+            this.Hide();
+        }
+
         private void logoutButton_Click(object sender, EventArgs e)
         {
             Global.account = null;
@@ -78,10 +78,11 @@ namespace ByCotton
             if (dataGridView.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dataGridView.SelectedRows[0];
+                int code = int.Parse(row.Cells[0].Value.ToString());
+                int amount = int.Parse(row.Cells[2].Value.ToString());
+                int total = amount * int.Parse(row.Cells[3].Value.ToString());
 
-                Global.invoiceID = int.Parse(row.Cells[0].Value.ToString());
-                (new InvoiceDetail()).Show();
-                this.Hide();
+                (new RefundAdd(code, amount, total)).Show();
             }
         }
     }

@@ -71,5 +71,11 @@ namespace ByCotton
             (new ProductDetail(listView.SelectedItems[0].ImageKey)).Show();
             this.Hide();
         }
+
+        private void invoiceButton_Click(object sender, EventArgs e)
+        {
+            (new invoiceHistoryCus()).Show();
+            this.Hide();
+        }
     }
 }

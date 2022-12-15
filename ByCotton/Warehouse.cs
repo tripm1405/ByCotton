@@ -61,65 +61,64 @@ namespace ByCotton
                 return;
             }
 
+            string filename = Path.GetFileName(openFileDialog.FileName);
+            if (filename == null)
+            {
+                return;
+            }
+
             try
             {
-                string filename = Path.GetFileName(openFileDialog.FileName);
-                if (filename == null)
-                {
-                    MessageBox.Show("Please select a valid image.");
-
-                    return;
-                }
-
                 File.Copy(openFileDialog.FileName, Global.IMAGE_PATH + filename);
-
-                SqlConnection cn = new SqlConnection(Global.DATABASE);
-                SqlCommand cmd;
-                if (editCode != -1)
-                {
-                    string query =
-                        "UPDATE Product " +
-                        "SET name = @name, amount = @amount, price = @price, image = @image " +
-                        "WHERE code = @code";
-                    cn.Open();
-                    cmd = new SqlCommand(query, cn);
-                    cmd.Parameters.AddWithValue("@code", editCode);
-                    cmd.Parameters.AddWithValue("@name", name);
-                    cmd.Parameters.AddWithValue("@amount", amount);
-                    cmd.Parameters.AddWithValue("@price", price);
-                    cmd.Parameters.AddWithValue("@image", filename);
-                    cmd.ExecuteReader().Close();
-                    cn.Close();
-
-                    editCode = -1;
-                    clearProductButton.Text = "ĐẶT LẠI";
-                    doneProductButton.Text = "THÊM";
-                }
-                else
-                {
-                    string query =
-                        "INSERT INTO Product (name, amount, price, image) VALUES " +
-                        "(@name, @amount, @price, @image)";
-                    cn.Open();
-                    cmd = new SqlCommand(query, cn);
-                    cmd.Parameters.AddWithValue("@name", name);
-                    cmd.Parameters.AddWithValue("@amount", amount);
-                    cmd.Parameters.AddWithValue("@price", price);
-                    cmd.Parameters.AddWithValue("@image", filename);
-                    cmd.ExecuteReader().Close();
-                    cn.Close();
-                }
-
-                loadData();
-
-                nameTextBox.Text = "";
-                amountNumericUpDown.Value = 0;
-                priceNumericUpDown.Value = 0;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "File Already exits");
             }
+
+            SqlConnection cn = new SqlConnection(Global.DATABASE);
+            SqlCommand cmd;
+            if (editCode != -1)
+            {
+                string query =
+                    "UPDATE Product " +
+                    "SET name = @name, amount = @amount, price = @price, image = @image " +
+                    "WHERE code = @code";
+                cn.Open();
+                cmd = new SqlCommand(query, cn);
+                cmd.Parameters.AddWithValue("@code", editCode);
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@amount", amount);
+                cmd.Parameters.AddWithValue("@price", price);
+                cmd.Parameters.AddWithValue("@image", filename);
+                cmd.ExecuteReader().Close();
+                cn.Close();
+
+                editCode = -1;
+                clearProductButton.Text = "ĐẶT LẠI";
+                doneProductButton.Text = "THÊM";
+
+                MessageBox.Show("SẢN PHẨM ĐÃ ĐƯỢC SỬA!");
+            }
+            else
+            {
+                string query =
+                    "INSERT INTO Product (name, amount, price, image) VALUES " +
+                    "(@name, @amount, @price, @image)";
+                cn.Open();
+                cmd = new SqlCommand(query, cn);
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@amount", amount);
+                cmd.Parameters.AddWithValue("@price", price);
+                cmd.Parameters.AddWithValue("@image", filename);
+                cmd.ExecuteReader().Close();
+                cn.Close();
+            }
+
+            loadData();
+
+            nameTextBox.Text = "";
+            amountNumericUpDown.Value = 0;
+            priceNumericUpDown.Value = 0;
         }
 
         private void deleteProductButton_Click(object sender, EventArgs e)
@@ -164,6 +163,7 @@ namespace ByCotton
 
         private void loadData()
         {
+            images.Clear();
             string query;
             SqlCommand cmd;
 
@@ -178,7 +178,7 @@ namespace ByCotton
 
             SqlDataReader r = cmd.ExecuteReader();
 
-            if (r.Read())
+            while (r.Read())
             {
                 images.Add(r.GetInt32(0), r.GetString(1));
             }

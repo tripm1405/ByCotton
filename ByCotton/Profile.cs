@@ -56,5 +56,11 @@ namespace ByCotton
             (new ProfileEdit()).Show();
             this.Hide();
         }
+
+        private void invoiceButton_Click(object sender, EventArgs e)
+        {
+            (new invoiceHistoryCus()).Show();
+            this.Hide();
+        }
     }
 }

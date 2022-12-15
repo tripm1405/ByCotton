@@ -1,6 +1,6 @@
 ﻿namespace ByCotton
 {
-    partial class InvoiceHistory
+    partial class InvoiceDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -112,16 +112,18 @@
             // 
             // invoiceHistoryButton
             // 
-            this.invoiceHistoryButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.invoiceHistoryButton.BackColor = System.Drawing.Color.Gray;
             this.invoiceHistoryButton.FlatAppearance.BorderSize = 0;
+            this.invoiceHistoryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.invoiceHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.invoiceHistoryButton.ForeColor = System.Drawing.Color.White;
             this.invoiceHistoryButton.Location = new System.Drawing.Point(376, 3);
             this.invoiceHistoryButton.Name = "invoiceHistoryButton";
             this.invoiceHistoryButton.Size = new System.Drawing.Size(176, 40);
-            this.invoiceHistoryButton.TabIndex = 20;
+            this.invoiceHistoryButton.TabIndex = 31;
             this.invoiceHistoryButton.Text = "LỊCH SỬ HÓA ĐƠN";
             this.invoiceHistoryButton.UseVisualStyleBackColor = false;
+            this.invoiceHistoryButton.Click += new System.EventHandler(this.invoiceHistoryButton_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -156,19 +158,19 @@
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(876, 379);
-            this.dataGridView.TabIndex = 22;
+            this.dataGridView.TabIndex = 25;
             this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
-            // InvoiceHistory
+            // InvoiceDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 450);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "InvoiceHistory";
-            this.Text = "InvoiceHistory";
-            this.Load += new System.EventHandler(this.InvoiceHistory_Load);
+            this.Name = "InvoiceDetail";
+            this.Text = "InvoiceDetail";
+            this.Load += new System.EventHandler(this.InvoiceDetail_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
@@ -184,9 +186,9 @@
         private System.Windows.Forms.Button invoiceButton;
         private System.Windows.Forms.Button refundButton;
         private System.Windows.Forms.Button customerButton;
+        private System.Windows.Forms.Button invoiceHistoryButton;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button logoutButton;
-        private System.Windows.Forms.Button invoiceHistoryButton;
         private System.Windows.Forms.DataGridView dataGridView;
     }
 }

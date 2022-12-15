@@ -36,6 +36,7 @@
             this.profileButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.invoiceButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -67,6 +68,7 @@
             this.flowLayoutPanel2.Controls.Add(this.homeButton);
             this.flowLayoutPanel2.Controls.Add(this.cartButton);
             this.flowLayoutPanel2.Controls.Add(this.profileButton);
+            this.flowLayoutPanel2.Controls.Add(this.invoiceButton);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -140,6 +142,20 @@
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
+            // invoiceButton
+            // 
+            this.invoiceButton.BackColor = System.Drawing.Color.Gray;
+            this.invoiceButton.FlatAppearance.BorderSize = 0;
+            this.invoiceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.invoiceButton.ForeColor = System.Drawing.Color.White;
+            this.invoiceButton.Location = new System.Drawing.Point(376, 3);
+            this.invoiceButton.Name = "invoiceButton";
+            this.invoiceButton.Size = new System.Drawing.Size(103, 40);
+            this.invoiceButton.TabIndex = 21;
+            this.invoiceButton.Text = "HÓA ĐƠN";
+            this.invoiceButton.UseVisualStyleBackColor = false;
+            this.invoiceButton.Click += new System.EventHandler(this.invoiceButton_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,5 +181,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Button profileButton;
+        private System.Windows.Forms.Button invoiceButton;
     }
 }

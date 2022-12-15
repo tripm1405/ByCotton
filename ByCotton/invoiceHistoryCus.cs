@@ -11,66 +11,61 @@ using System.Windows.Forms;
 
 namespace ByCotton
 {
-    public partial class InvoiceHistory : Form
+    public partial class invoiceHistoryCus : Form
     {
-        public InvoiceHistory()
+        public invoiceHistoryCus()
         {
             InitializeComponent();
+        }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            (new Home()).Show();
+            this.Hide();
+        }
+
+        private void cartButton_Click(object sender, EventArgs e)
+        {
+            (new Cart()).Show();
+            this.Hide();
+        }
+
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            (new Profile()).Show();
+            this.Hide();
+        }
+
+        private void invoiceHistoryCus_Load(object sender, EventArgs e)
+        {
+            loadData();
         }
 
         private void loadData()
         {
             string INVOICE_DETAIL =
                 "SELECT invoice, SUM(amount*price) AS price " +
-                "FROM InvoiceDetail " + 
+                "FROM InvoiceDetail " +
                 "GROUP BY invoice";
-
-            SqlConnection cn = new SqlConnection(Global.DATABASE);
-            cn.Open();
 
             string query =
                 "SELECT I.*, ID.price " +
                 "FROM Invoice I " +
                 "JOIN ( " +
                     INVOICE_DETAIL +
-                ") ID ON ID.invoice = I.code";
+                ") ID ON ID.invoice = I.code " +
+                "WHERE customer = @customer";
+
+            SqlConnection cn = new SqlConnection(Global.DATABASE);
+            cn.Open();
             SqlCommand cmd = new SqlCommand(query, cn);
+            cmd.Parameters.AddWithValue("@customer", Global.account.phone);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds, "Account");
             dataGridView.DataSource = ds.Tables["Account"].DefaultView;
 
             cn.Close();
-        }
-
-        private void InvoiceHistory_Load(object sender, EventArgs e)
-        {
-            loadData();
-        }
-
-        private void invoiceButton_Click(object sender, EventArgs e)
-        {
-            (new Invoice()).Show();
-            this.Hide();
-        }
-
-        private void refundButton_Click(object sender, EventArgs e)
-        {
-            (new Refund()).Show();
-            this.Hide();
-        }
-
-        private void customerButton_Click(object sender, EventArgs e)
-        {
-            (new Customer()).Show();
-            this.Hide();
-        }
-
-        private void logoutButton_Click(object sender, EventArgs e)
-        {
-            Global.account = null;
-            (new Login()).Show();
-            this.Hide();
         }
 
         private void dataGridView_SelectionChanged(object sender, EventArgs e)
@@ -80,9 +75,16 @@ namespace ByCotton
                 DataGridViewRow row = dataGridView.SelectedRows[0];
 
                 Global.invoiceID = int.Parse(row.Cells[0].Value.ToString());
-                (new InvoiceDetail()).Show();
+                (new InvoiceDetailCus()).Show();
                 this.Hide();
             }
+        }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            Global.account = null;
+            (new Login()).Show();
+            this.Hide();
         }
     }
 }

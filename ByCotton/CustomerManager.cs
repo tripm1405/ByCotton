@@ -26,7 +26,7 @@ namespace ByCotton
             string query =
                 "SELECT C.phone, A.username, A.email, A.name, A.address " +
                 "FROM Account A " +
-                "JOIN Customer C ON C.account = A.username";
+                "RIGHT JOIN Customer C ON C.account = A.username";
             SqlCommand cmd = new SqlCommand(query, cn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
@@ -38,7 +38,7 @@ namespace ByCotton
 
         private void warehouseButton_Click(object sender, EventArgs e)
         {
-            (new CustomerManager()).Show();
+            (new Warehouse()).Show();
             this.Hide();
         }
 

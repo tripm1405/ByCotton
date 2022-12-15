@@ -110,5 +110,11 @@ namespace ByCotton
             (new Home()).Show();
             this.Hide();
         }
+
+        private void invoiceButton_Click(object sender, EventArgs e)
+        {
+            (new invoiceHistoryCus()).Show();
+            this.Hide();
+        }
     }
 }

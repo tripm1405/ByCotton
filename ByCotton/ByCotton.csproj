@@ -83,11 +83,29 @@
     <Compile Include="Invoice.Designer.cs">
       <DependentUpon>Invoice.cs</DependentUpon>
     </Compile>
+    <Compile Include="InvoiceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceDetail.Designer.cs">
+      <DependentUpon>InvoiceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDetailCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceDetailCus.Designer.cs">
+      <DependentUpon>InvoiceDetailCus.cs</DependentUpon>
+    </Compile>
     <Compile Include="InvoiceHistory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InvoiceHistory.Designer.cs">
       <DependentUpon>InvoiceHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="invoiceHistoryCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invoiceHistoryCus.Designer.cs">
+      <DependentUpon>invoiceHistoryCus.cs</DependentUpon>
     </Compile>
     <Compile Include="InvoiceHistoryManger.cs">
       <SubType>Form</SubType>
@@ -100,12 +118,6 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProductAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProductAdd.Designer.cs">
-      <DependentUpon>ProductAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductDetail.cs">
       <SubType>Form</SubType>
@@ -132,6 +144,12 @@
     </Compile>
     <Compile Include="Refund.Designer.cs">
       <DependentUpon>Refund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RefundAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RefundAdd.Designer.cs">
+      <DependentUpon>RefundAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="RefundManager.cs">
       <SubType>Form</SubType>
@@ -181,17 +199,23 @@
     <EmbeddedResource Include="Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceDetail.resx">
+      <DependentUpon>InvoiceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceDetailCus.resx">
+      <DependentUpon>InvoiceDetailCus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InvoiceHistory.resx">
       <DependentUpon>InvoiceHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invoiceHistoryCus.resx">
+      <DependentUpon>invoiceHistoryCus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InvoiceHistoryManger.resx">
       <DependentUpon>InvoiceHistoryManger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProductAdd.resx">
-      <DependentUpon>ProductAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductDetail.resx">
       <DependentUpon>ProductDetail.cs</DependentUpon>
@@ -213,6 +237,9 @@
     </Compile>
     <EmbeddedResource Include="Refund.resx">
       <DependentUpon>Refund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RefundAdd.resx">
+      <DependentUpon>RefundAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RefundManager.resx">
       <DependentUpon>RefundManager.cs</DependentUpon>
