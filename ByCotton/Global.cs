@@ -41,5 +41,7 @@ namespace ByCotton
 
         public static Account account = null;
         public static Dictionary<string, Product> cart = new Dictionary<string, Product>();
+
+        public static int invoiceID;
     }
 }
