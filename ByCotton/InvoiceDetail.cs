@@ -26,8 +26,9 @@ namespace ByCotton
         private void loadData()
         {
             string query =
-                "SELECT code, invoice, amount, price, (amount * price) AS total " +
-                "FROM InvoiceDetail " +
+                "SELECT id.code, p.name, id.amount, id.price, (id.amount * id.price) AS total " +
+                "FROM InvoiceDetail id " +
+                "JOIN Product p ON p.code = id.product " +
                 "WHERE invoice = @invoice ";
 
             SqlConnection cn = new SqlConnection(Global.DATABASE);
@@ -40,11 +41,17 @@ namespace ByCotton
             dataGridView.DataSource = ds.Tables["InvoiceDetail"].DefaultView;
 
             cn.Close();
+
+            dataGridView.Columns[0].HeaderText = "Mã";
+            dataGridView.Columns[1].HeaderText = "Tên sản phẩm";
+            dataGridView.Columns[2].HeaderText = "Số lượng";
+            dataGridView.Columns[3].HeaderText = "Đơn giá";
+            dataGridView.Columns[4].HeaderText = "Tổng giá";
         }
 
         private void invoiceButton_Click(object sender, EventArgs e)
         {
-            (new InvoiceHistory()).Show();
+            (new Invoice()).Show();
             this.Hide();
         }
 

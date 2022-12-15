@@ -34,6 +34,12 @@ namespace ByCotton
             dataGridView.DataSource = ds.Tables["Account"].DefaultView;
 
             cn.Close();
+
+            dataGridView.Columns[0].HeaderText = "Số điện thoại";
+            dataGridView.Columns[1].HeaderText = "Tài khoản";
+            dataGridView.Columns[2].HeaderText = "Email";
+            dataGridView.Columns[3].HeaderText = "Tên";
+            dataGridView.Columns[4].HeaderText = "Địa chỉ";
         }
 
         private void invoiceButton_Click(object sender, EventArgs e)

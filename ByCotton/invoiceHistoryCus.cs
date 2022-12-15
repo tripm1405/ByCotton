@@ -49,7 +49,7 @@ namespace ByCotton
                 "GROUP BY invoice";
 
             string query =
-                "SELECT I.*, ID.price " +
+                "SELECT I.code, I.customer, ID.price, I.create_at " +
                 "FROM Invoice I " +
                 "JOIN ( " +
                     INVOICE_DETAIL +
@@ -66,6 +66,11 @@ namespace ByCotton
             dataGridView.DataSource = ds.Tables["Account"].DefaultView;
 
             cn.Close();
+
+            dataGridView.Columns[0].HeaderText = "Mã";
+            dataGridView.Columns[1].HeaderText = "Khách hàng";
+            dataGridView.Columns[2].HeaderText = "Tổng tiền";
+            dataGridView.Columns[3].HeaderText = "Ngày tạo";
         }
 
         private void dataGridView_SelectionChanged(object sender, EventArgs e)

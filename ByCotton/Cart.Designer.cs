@@ -33,6 +33,7 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.cartButton = new System.Windows.Forms.Button();
             this.prodileButton = new System.Windows.Forms.Button();
+            this.invoiceButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.logoutButton = new System.Windows.Forms.Button();
             this.listView = new System.Windows.Forms.ListView();
@@ -43,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.totalLabel = new System.Windows.Forms.Label();
             this.orderButton = new System.Windows.Forms.Button();
-            this.invoiceButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -114,6 +114,20 @@
             this.prodileButton.Text = "TÀI KHOẢN";
             this.prodileButton.UseVisualStyleBackColor = false;
             this.prodileButton.Click += new System.EventHandler(this.prodileButton_Click);
+            // 
+            // invoiceButton
+            // 
+            this.invoiceButton.BackColor = System.Drawing.Color.Gray;
+            this.invoiceButton.FlatAppearance.BorderSize = 0;
+            this.invoiceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.invoiceButton.ForeColor = System.Drawing.Color.White;
+            this.invoiceButton.Location = new System.Drawing.Point(376, 3);
+            this.invoiceButton.Name = "invoiceButton";
+            this.invoiceButton.Size = new System.Drawing.Size(103, 40);
+            this.invoiceButton.TabIndex = 22;
+            this.invoiceButton.Text = "HÓA ĐƠN";
+            this.invoiceButton.UseVisualStyleBackColor = false;
+            this.invoiceButton.Click += new System.EventHandler(this.invoiceButton_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -213,20 +227,6 @@
             this.orderButton.UseVisualStyleBackColor = false;
             this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
             // 
-            // invoiceButton
-            // 
-            this.invoiceButton.BackColor = System.Drawing.Color.Gray;
-            this.invoiceButton.FlatAppearance.BorderSize = 0;
-            this.invoiceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.invoiceButton.ForeColor = System.Drawing.Color.White;
-            this.invoiceButton.Location = new System.Drawing.Point(376, 3);
-            this.invoiceButton.Name = "invoiceButton";
-            this.invoiceButton.Size = new System.Drawing.Size(103, 40);
-            this.invoiceButton.TabIndex = 22;
-            this.invoiceButton.Text = "HÓA ĐƠN";
-            this.invoiceButton.UseVisualStyleBackColor = false;
-            this.invoiceButton.Click += new System.EventHandler(this.invoiceButton_Click);
-            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -238,7 +238,7 @@
             this.Controls.Add(this.listView);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Cart";
-            this.Text = "Cart";
+            this.Text = "W";
             this.Load += new System.EventHandler(this.Cart_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);

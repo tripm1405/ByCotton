@@ -115,6 +115,32 @@ BEGIN
 END
 GO
 
+DROP TRIGGER IF EXISTS refundAdd
+GO
+
+CREATE TRIGGER refundAdd
+ON InvoiceDetail
+INSTEAD OF UPDATE
+AS
+BEGIN
+	DECLARE @refund INT, @product INT;
+	SET @product = (SELECT product FROM inserted);
+	SET @refund = (SELECT refund FROM inserted);
+
+	IF (@refund IS NOT NULL)
+	BEGIN
+		DECLARE @amount INT;
+		SET @amount = (SELECT amount FROM Refund WHERE code = @refund);
+
+		UPDATE Product
+		SET amount = amount + @amount
+		WHERE code = @product;
+
+		SELECT * FROM Refund WHERE code = @refund;
+	END
+END
+GO
+
 -- CREATE PROCEDURE
 DROP PROC IF EXISTS invoiceInsert
 GO
@@ -238,7 +264,4 @@ INSERT INTO InvoiceDetail(invoice, product, amount, price, refund) VALUES
 GO
 INSERT INTO InvoiceDetail(invoice, product, amount, price, refund) VALUES
 (4, 2, 1, 38500, 1)
-GO
-
-SELECT * FROM InvoiceDetail
 GO

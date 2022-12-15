@@ -194,6 +194,11 @@ namespace ByCotton
             productsDataGridView.DataSource = ds.Tables["Product"].DefaultView;
 
             cn.Close();
+
+            productsDataGridView.Columns[0].HeaderText = "Mã";
+            productsDataGridView.Columns[1].HeaderText = "Tên";
+            productsDataGridView.Columns[2].HeaderText = "Số lượng";
+            productsDataGridView.Columns[3].HeaderText = "Đơn giá";
         }
 
         private void clearProductButton_Click(object sender, EventArgs e)

@@ -24,7 +24,7 @@ namespace ByCotton
             cn.Open();
 
             string query =
-                "SELECT I.invoice, P.name, R.* " +
+                "SELECT I.invoice, P.name, R.amount, R.price, R.create_at " +
                 "FROM Refund R " +
                 "JOIN InvoiceDetail I ON I.refund = R.code " +
                 "JOIN Product P ON P.code = I.product";
@@ -35,6 +35,12 @@ namespace ByCotton
             dataGridView.DataSource = ds.Tables["Refund"].DefaultView;
 
             cn.Close();
+
+            dataGridView.Columns[0].HeaderText = "Mã";
+            dataGridView.Columns[1].HeaderText = "Tên sản phẩm";
+            dataGridView.Columns[2].HeaderText = "Số lượng";
+            dataGridView.Columns[3].HeaderText = "Tổng tiền";
+            dataGridView.Columns[4].HeaderText = "Ngày tạo";
         }
 
         private void warehouseButton_Click(object sender, EventArgs e)
