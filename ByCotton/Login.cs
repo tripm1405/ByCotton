@@ -113,5 +113,25 @@ namespace ByCotton
         {
             logoPictureBox.Image = Image.FromFile(Global.IMAGE_PATH + "logo.png");
         }
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logoPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,7 +37,7 @@ namespace ByCotton
     static class Global
     {
         public static string IMAGE_PATH = AppDomain.CurrentDomain.BaseDirectory + "..\\..\\..\\public\\images\\";
-        public static string DATABASE = "Data Source=LAPTOP-5HLVG267;Initial Catalog=BY_COTTON;Integrated Security=True";
+        public static string DATABASE = "Data Source=LAPTOP-QB5MEHEP\\SQLEXPRESS;Initial Catalog=IFST;Integrated Security=True";
 
         public static Account account = null;
         public static Dictionary<string, Product> cart = new Dictionary<string, Product>();

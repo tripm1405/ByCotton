@@ -149,7 +149,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(103, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 23;
             this.label1.Text = "TÀI KHOẢN:";
             // 
@@ -159,7 +159,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(152, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 16);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 24;
             this.label2.Text = "TÊN:";
             // 
@@ -169,7 +169,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(117, 147);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 25;
             this.label3.Text = "GIỚI TÍNH";
             // 
@@ -179,7 +179,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(139, 179);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
+            this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 26;
             this.label4.Text = "EMAIL:";
             // 
@@ -189,7 +189,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(130, 211);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 16);
+            this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 27;
             this.label5.Text = "ĐỊA CHỈ:";
             // 
@@ -198,7 +198,7 @@
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Location = new System.Drawing.Point(223, 83);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(0, 16);
+            this.usernameLabel.Size = new System.Drawing.Size(0, 13);
             this.usernameLabel.TabIndex = 28;
             // 
             // nameLabel
@@ -206,7 +206,7 @@
             this.nameLabel.AutoSize = true;
             this.nameLabel.Location = new System.Drawing.Point(223, 115);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(0, 16);
+            this.nameLabel.Size = new System.Drawing.Size(0, 13);
             this.nameLabel.TabIndex = 29;
             // 
             // genderLabel
@@ -214,7 +214,7 @@
             this.genderLabel.AutoSize = true;
             this.genderLabel.Location = new System.Drawing.Point(223, 147);
             this.genderLabel.Name = "genderLabel";
-            this.genderLabel.Size = new System.Drawing.Size(0, 16);
+            this.genderLabel.Size = new System.Drawing.Size(0, 13);
             this.genderLabel.TabIndex = 30;
             // 
             // emailLabel
@@ -222,7 +222,7 @@
             this.emailLabel.AutoSize = true;
             this.emailLabel.Location = new System.Drawing.Point(223, 179);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(0, 16);
+            this.emailLabel.Size = new System.Drawing.Size(0, 13);
             this.emailLabel.TabIndex = 31;
             // 
             // addressLabel
@@ -230,7 +230,7 @@
             this.addressLabel.AutoSize = true;
             this.addressLabel.Location = new System.Drawing.Point(223, 211);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(0, 16);
+            this.addressLabel.Size = new System.Drawing.Size(0, 13);
             this.addressLabel.TabIndex = 32;
             // 
             // changePasswordButton
@@ -270,7 +270,7 @@
             this.phoneLabel.AutoSize = true;
             this.phoneLabel.Location = new System.Drawing.Point(223, 243);
             this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(0, 16);
+            this.phoneLabel.Size = new System.Drawing.Size(0, 13);
             this.phoneLabel.TabIndex = 36;
             // 
             // label7
@@ -279,13 +279,13 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(73, 243);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(121, 16);
+            this.label7.Size = new System.Drawing.Size(104, 13);
             this.label7.TabIndex = 35;
             this.label7.Text = "SỐ ĐIỆN THOẠI:";
             // 
             // Profile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 340);
             this.Controls.Add(this.phoneLabel);
