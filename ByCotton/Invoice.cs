@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,8 @@ namespace ByCotton
         private void Invoice_Load(object sender, EventArgs e)
         {
             loadData();
+
+            invoiceDataGridView.CellValueChanged += new DataGridViewCellEventHandler(invoiceDataGridView_CellValueChanged);
         }
 
         private void logoutButton_Click(object sender, EventArgs e)
@@ -34,14 +38,19 @@ namespace ByCotton
 
         private void loadData()
         {
-            string query = "SELECT code, name, amount, price FROM Product";
+            string query = 
+                "SELECT code, name, amount, price " +
+                "FROM Product " +
+                "WHERE amount > 0";
             SqlConnection cn = new SqlConnection(Global.DATABASE);
             cn.Open();
+
             SqlCommand cmd = new SqlCommand(query, cn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds, "Product");
             productsDataGridView.DataSource = ds.Tables["Product"].DefaultView;
+
             cn.Close();
 
             productsDataGridView.Columns[0].HeaderText = "Mã";
@@ -73,18 +82,35 @@ namespace ByCotton
 
             DataGridViewRow clone;
             int rowID;
+            DataGridViewRow row;
+            bool iscontain;
             for (int i = 0; i < selectedRowCount; i++)
             {
                 clone = productsDataGridView.SelectedRows[i];
 
-                rowID = invoiceDataGridView.Rows.Add(new string[] {
-                    clone.Cells[0].Value.ToString(),
-                    clone.Cells[1].Value.ToString(),
-                    "1",
-                    clone.Cells[3].Value.ToString()
-                });
+                iscontain = true;
+                for (int j = 0; j < invoiceDataGridView.Rows.Count; j++)
+                {
+                    MessageBox.Show(clone.Cells[0].Value + "," + invoiceDataGridView.Rows[j].Cells[0].Value);
+                    row = invoiceDataGridView.Rows[j];
+                    if (int.Parse(clone.Cells[0].Value.ToString()) == int.Parse(invoiceDataGridView.Rows[j].Cells[0].Value.ToString()))
+                    {
+                        iscontain = false;
+                        break;
+                    }
+                }
 
-                invoiceDataGridView.Rows[rowID].Cells[2].ReadOnly = false;
+                if (iscontain)
+                {
+                    rowID = invoiceDataGridView.Rows.Add(new string[] {
+                        clone.Cells[0].Value.ToString(),
+                        clone.Cells[1].Value.ToString(),
+                        "1",
+                        clone.Cells[3].Value.ToString()
+                    });
+
+                    invoiceDataGridView.Rows[rowID].Cells[2].ReadOnly = false;
+                }
             }
         }
 
@@ -205,6 +231,27 @@ namespace ByCotton
         {
             (new InvoiceHistory()).Show();
             this.Hide();
+        }
+
+        private void invoiceDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            int codeCurr = int.Parse(invoiceDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString());
+            int amountCurr = int.Parse(invoiceDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString());
+
+            DataGridViewRow row;
+            int amount;
+            for (int i = 0; i < productsDataGridView.Rows.Count; i++)
+            {
+                row = productsDataGridView.Rows[i];
+
+                if (int.Parse(row.Cells[0].Value.ToString()) == codeCurr)
+                {
+                    amount = int.Parse(row.Cells[2].Value.ToString());
+                    if (amount < amountCurr) {
+                        productsDataGridView.Rows[e.RowIndex].Cells[2].Value = amount;
+                    }
+                }
+            }
         }
     }
 }

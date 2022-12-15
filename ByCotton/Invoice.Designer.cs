@@ -33,6 +33,7 @@
             this.invoiceButton = new System.Windows.Forms.Button();
             this.refundButton = new System.Windows.Forms.Button();
             this.customerButton = new System.Windows.Forms.Button();
+            this.invoiceHistoryButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.logoutButton = new System.Windows.Forms.Button();
             this.productsDataGridView = new System.Windows.Forms.DataGridView();
@@ -49,7 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.confirmButton = new System.Windows.Forms.Button();
-            this.invoiceHistoryButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -122,6 +122,21 @@
             this.customerButton.Text = "KHÁCH HÀNG";
             this.customerButton.UseVisualStyleBackColor = false;
             this.customerButton.Click += new System.EventHandler(this.customerButton_Click);
+            // 
+            // invoiceHistoryButton
+            // 
+            this.invoiceHistoryButton.BackColor = System.Drawing.Color.Gray;
+            this.invoiceHistoryButton.FlatAppearance.BorderSize = 0;
+            this.invoiceHistoryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.invoiceHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.invoiceHistoryButton.ForeColor = System.Drawing.Color.White;
+            this.invoiceHistoryButton.Location = new System.Drawing.Point(376, 3);
+            this.invoiceHistoryButton.Name = "invoiceHistoryButton";
+            this.invoiceHistoryButton.Size = new System.Drawing.Size(176, 40);
+            this.invoiceHistoryButton.TabIndex = 31;
+            this.invoiceHistoryButton.Text = "LỊCH SỬ HÓA ĐƠN";
+            this.invoiceHistoryButton.UseVisualStyleBackColor = false;
+            this.invoiceHistoryButton.Click += new System.EventHandler(this.invoiceHistoryButton_Click);
             // 
             // flowLayoutPanel3
             // 
@@ -309,21 +324,6 @@
             this.confirmButton.Text = "XÁC NHẬN HÓA ĐƠN";
             this.confirmButton.UseVisualStyleBackColor = false;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
-            // 
-            // invoiceHistoryButton
-            // 
-            this.invoiceHistoryButton.BackColor = System.Drawing.Color.Gray;
-            this.invoiceHistoryButton.FlatAppearance.BorderSize = 0;
-            this.invoiceHistoryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.invoiceHistoryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.invoiceHistoryButton.ForeColor = System.Drawing.Color.White;
-            this.invoiceHistoryButton.Location = new System.Drawing.Point(376, 3);
-            this.invoiceHistoryButton.Name = "invoiceHistoryButton";
-            this.invoiceHistoryButton.Size = new System.Drawing.Size(176, 40);
-            this.invoiceHistoryButton.TabIndex = 31;
-            this.invoiceHistoryButton.Text = "LỊCH SỬ HÓA ĐƠN";
-            this.invoiceHistoryButton.UseVisualStyleBackColor = false;
-            this.invoiceHistoryButton.Click += new System.EventHandler(this.invoiceHistoryButton_Click);
             // 
             // Invoice
             // 
