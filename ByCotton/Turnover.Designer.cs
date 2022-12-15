@@ -56,6 +56,11 @@
             this.day3ValueLabel = new System.Windows.Forms.Label();
             this.day2ValueLabel = new System.Windows.Forms.Label();
             this.day1ValueLabel = new System.Windows.Forms.Label();
+            this.yearDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dayLabel = new System.Windows.Forms.Label();
+            this.monthDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dayDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -185,7 +190,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 82);
+            this.label1.Location = new System.Drawing.Point(282, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(183, 16);
             this.label1.TabIndex = 21;
@@ -194,7 +199,7 @@
             // yearLabel
             // 
             this.yearLabel.AutoSize = true;
-            this.yearLabel.Location = new System.Drawing.Point(213, 82);
+            this.yearLabel.Location = new System.Drawing.Point(509, 87);
             this.yearLabel.Name = "yearLabel";
             this.yearLabel.Size = new System.Drawing.Size(84, 16);
             this.yearLabel.TabIndex = 22;
@@ -203,7 +208,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 119);
+            this.label3.Location = new System.Drawing.Point(282, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(193, 16);
             this.label3.TabIndex = 23;
@@ -212,7 +217,7 @@
             // monthlabel
             // 
             this.monthlabel.AutoSize = true;
-            this.monthlabel.Location = new System.Drawing.Point(239, 119);
+            this.monthlabel.Location = new System.Drawing.Point(509, 124);
             this.monthlabel.Name = "monthlabel";
             this.monthlabel.Size = new System.Drawing.Size(84, 16);
             this.monthlabel.TabIndex = 24;
@@ -221,7 +226,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 158);
+            this.label4.Location = new System.Drawing.Point(282, 188);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(204, 16);
             this.label4.TabIndex = 25;
@@ -230,7 +235,7 @@
             // day1Label
             // 
             this.day1Label.AutoSize = true;
-            this.day1Label.Location = new System.Drawing.Point(113, 199);
+            this.day1Label.Location = new System.Drawing.Point(383, 229);
             this.day1Label.Name = "day1Label";
             this.day1Label.Size = new System.Drawing.Size(44, 16);
             this.day1Label.TabIndex = 26;
@@ -239,7 +244,7 @@
             // day2Label
             // 
             this.day2Label.AutoSize = true;
-            this.day2Label.Location = new System.Drawing.Point(113, 231);
+            this.day2Label.Location = new System.Drawing.Point(383, 261);
             this.day2Label.Name = "day2Label";
             this.day2Label.Size = new System.Drawing.Size(44, 16);
             this.day2Label.TabIndex = 27;
@@ -248,7 +253,7 @@
             // day3Label
             // 
             this.day3Label.AutoSize = true;
-            this.day3Label.Location = new System.Drawing.Point(113, 263);
+            this.day3Label.Location = new System.Drawing.Point(383, 293);
             this.day3Label.Name = "day3Label";
             this.day3Label.Size = new System.Drawing.Size(44, 16);
             this.day3Label.TabIndex = 28;
@@ -257,7 +262,7 @@
             // day4Label
             // 
             this.day4Label.AutoSize = true;
-            this.day4Label.Location = new System.Drawing.Point(113, 295);
+            this.day4Label.Location = new System.Drawing.Point(383, 325);
             this.day4Label.Name = "day4Label";
             this.day4Label.Size = new System.Drawing.Size(44, 16);
             this.day4Label.TabIndex = 29;
@@ -266,7 +271,7 @@
             // day5Label
             // 
             this.day5Label.AutoSize = true;
-            this.day5Label.Location = new System.Drawing.Point(113, 327);
+            this.day5Label.Location = new System.Drawing.Point(383, 357);
             this.day5Label.Name = "day5Label";
             this.day5Label.Size = new System.Drawing.Size(44, 16);
             this.day5Label.TabIndex = 30;
@@ -275,7 +280,7 @@
             // day6Label
             // 
             this.day6Label.AutoSize = true;
-            this.day6Label.Location = new System.Drawing.Point(113, 359);
+            this.day6Label.Location = new System.Drawing.Point(383, 389);
             this.day6Label.Name = "day6Label";
             this.day6Label.Size = new System.Drawing.Size(44, 16);
             this.day6Label.TabIndex = 31;
@@ -284,7 +289,7 @@
             // day7Label
             // 
             this.day7Label.AutoSize = true;
-            this.day7Label.Location = new System.Drawing.Point(113, 391);
+            this.day7Label.Location = new System.Drawing.Point(383, 421);
             this.day7Label.Name = "day7Label";
             this.day7Label.Size = new System.Drawing.Size(51, 16);
             this.day7Label.TabIndex = 32;
@@ -293,7 +298,7 @@
             // day7ValueLabel
             // 
             this.day7ValueLabel.AutoSize = true;
-            this.day7ValueLabel.Location = new System.Drawing.Point(324, 391);
+            this.day7ValueLabel.Location = new System.Drawing.Point(594, 421);
             this.day7ValueLabel.Name = "day7ValueLabel";
             this.day7ValueLabel.Size = new System.Drawing.Size(51, 16);
             this.day7ValueLabel.TabIndex = 39;
@@ -302,7 +307,7 @@
             // day6ValueLabel
             // 
             this.day6ValueLabel.AutoSize = true;
-            this.day6ValueLabel.Location = new System.Drawing.Point(324, 359);
+            this.day6ValueLabel.Location = new System.Drawing.Point(594, 389);
             this.day6ValueLabel.Name = "day6ValueLabel";
             this.day6ValueLabel.Size = new System.Drawing.Size(51, 16);
             this.day6ValueLabel.TabIndex = 38;
@@ -311,7 +316,7 @@
             // day5ValueLabel
             // 
             this.day5ValueLabel.AutoSize = true;
-            this.day5ValueLabel.Location = new System.Drawing.Point(324, 327);
+            this.day5ValueLabel.Location = new System.Drawing.Point(594, 357);
             this.day5ValueLabel.Name = "day5ValueLabel";
             this.day5ValueLabel.Size = new System.Drawing.Size(51, 16);
             this.day5ValueLabel.TabIndex = 37;
@@ -320,7 +325,7 @@
             // day4ValueLabel
             // 
             this.day4ValueLabel.AutoSize = true;
-            this.day4ValueLabel.Location = new System.Drawing.Point(324, 295);
+            this.day4ValueLabel.Location = new System.Drawing.Point(594, 325);
             this.day4ValueLabel.Name = "day4ValueLabel";
             this.day4ValueLabel.Size = new System.Drawing.Size(51, 16);
             this.day4ValueLabel.TabIndex = 36;
@@ -329,7 +334,7 @@
             // day3ValueLabel
             // 
             this.day3ValueLabel.AutoSize = true;
-            this.day3ValueLabel.Location = new System.Drawing.Point(324, 263);
+            this.day3ValueLabel.Location = new System.Drawing.Point(594, 293);
             this.day3ValueLabel.Name = "day3ValueLabel";
             this.day3ValueLabel.Size = new System.Drawing.Size(51, 16);
             this.day3ValueLabel.TabIndex = 35;
@@ -338,7 +343,7 @@
             // day2ValueLabel
             // 
             this.day2ValueLabel.AutoSize = true;
-            this.day2ValueLabel.Location = new System.Drawing.Point(324, 231);
+            this.day2ValueLabel.Location = new System.Drawing.Point(594, 261);
             this.day2ValueLabel.Name = "day2ValueLabel";
             this.day2ValueLabel.Size = new System.Drawing.Size(51, 16);
             this.day2ValueLabel.TabIndex = 34;
@@ -347,17 +352,71 @@
             // day1ValueLabel
             // 
             this.day1ValueLabel.AutoSize = true;
-            this.day1ValueLabel.Location = new System.Drawing.Point(324, 199);
+            this.day1ValueLabel.Location = new System.Drawing.Point(594, 229);
             this.day1ValueLabel.Name = "day1ValueLabel";
             this.day1ValueLabel.Size = new System.Drawing.Size(51, 16);
             this.day1ValueLabel.TabIndex = 33;
             this.day1ValueLabel.Text = "label17";
             // 
+            // yearDateTimePicker
+            // 
+            this.yearDateTimePicker.Checked = false;
+            this.yearDateTimePicker.CustomFormat = "yyyy";
+            this.yearDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.yearDateTimePicker.Location = new System.Drawing.Point(40, 81);
+            this.yearDateTimePicker.Name = "yearDateTimePicker";
+            this.yearDateTimePicker.Size = new System.Drawing.Size(148, 22);
+            this.yearDateTimePicker.TabIndex = 40;
+            this.yearDateTimePicker.ValueChanged += new System.EventHandler(this.yearDateTimePicker_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(282, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 16);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "DOANH THU THEO NGÀY";
+            // 
+            // dayLabel
+            // 
+            this.dayLabel.AutoSize = true;
+            this.dayLabel.Location = new System.Drawing.Point(509, 155);
+            this.dayLabel.Name = "dayLabel";
+            this.dayLabel.Size = new System.Drawing.Size(84, 16);
+            this.dayLabel.TabIndex = 42;
+            this.dayLabel.Text = "TURNOVER";
+            // 
+            // monthDateTimePicker
+            // 
+            this.monthDateTimePicker.CustomFormat = "yyyy/MM";
+            this.monthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.monthDateTimePicker.Location = new System.Drawing.Point(40, 117);
+            this.monthDateTimePicker.Name = "monthDateTimePicker";
+            this.monthDateTimePicker.Size = new System.Drawing.Size(148, 22);
+            this.monthDateTimePicker.TabIndex = 43;
+            this.monthDateTimePicker.ValueChanged += new System.EventHandler(this.monthDateTimePicker_ValueChanged);
+            // 
+            // dayDateTimePicker
+            // 
+            this.dayDateTimePicker.CustomFormat = "yyyy/MM/dd";
+            this.dayDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dayDateTimePicker.Location = new System.Drawing.Point(40, 155);
+            this.dayDateTimePicker.Name = "dayDateTimePicker";
+            this.dayDateTimePicker.Size = new System.Drawing.Size(148, 22);
+            this.dayDateTimePicker.TabIndex = 44;
+            this.dayDateTimePicker.ValueChanged += new System.EventHandler(this.dayDateTimePicker_ValueChanged);
+            // 
             // Turnover
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 628);
+            this.ClientSize = new System.Drawing.Size(900, 470);
+            this.Controls.Add(this.dayDateTimePicker);
+            this.Controls.Add(this.monthDateTimePicker);
+            this.Controls.Add(this.dayLabel);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.yearDateTimePicker);
             this.Controls.Add(this.day7ValueLabel);
             this.Controls.Add(this.day6ValueLabel);
             this.Controls.Add(this.day5ValueLabel);
@@ -419,5 +478,10 @@
         private System.Windows.Forms.Label day3ValueLabel;
         private System.Windows.Forms.Label day2ValueLabel;
         private System.Windows.Forms.Label day1ValueLabel;
+        private System.Windows.Forms.DateTimePicker yearDateTimePicker;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label dayLabel;
+        private System.Windows.Forms.DateTimePicker monthDateTimePicker;
+        private System.Windows.Forms.DateTimePicker dayDateTimePicker;
     }
 }

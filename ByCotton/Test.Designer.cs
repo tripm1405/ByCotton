@@ -36,6 +36,10 @@
             this.uploadButton = new System.Windows.Forms.Button();
             this.submitButton = new System.Windows.Forms.Button();
             this.pathLabel = new System.Windows.Forms.Label();
+            this.yearDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.monthDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dayDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.testButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -118,11 +122,53 @@
             this.pathLabel.TabIndex = 5;
             this.pathLabel.Text = "PATH";
             // 
+            // yearDateTimePicker
+            // 
+            this.yearDateTimePicker.Checked = false;
+            this.yearDateTimePicker.CustomFormat = "yyyy";
+            this.yearDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.yearDateTimePicker.Location = new System.Drawing.Point(12, 258);
+            this.yearDateTimePicker.Name = "yearDateTimePicker";
+            this.yearDateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.yearDateTimePicker.TabIndex = 6;
+            // 
+            // monthDateTimePicker
+            // 
+            this.monthDateTimePicker.CustomFormat = "MM/yyyy";
+            this.monthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.monthDateTimePicker.Location = new System.Drawing.Point(12, 286);
+            this.monthDateTimePicker.Name = "monthDateTimePicker";
+            this.monthDateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.monthDateTimePicker.TabIndex = 7;
+            // 
+            // dayDateTimePicker
+            // 
+            this.dayDateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.dayDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dayDateTimePicker.Location = new System.Drawing.Point(13, 315);
+            this.dayDateTimePicker.Name = "dayDateTimePicker";
+            this.dayDateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.dayDateTimePicker.TabIndex = 8;
+            // 
+            // testButton
+            // 
+            this.testButton.Location = new System.Drawing.Point(13, 344);
+            this.testButton.Name = "testButton";
+            this.testButton.Size = new System.Drawing.Size(75, 23);
+            this.testButton.TabIndex = 9;
+            this.testButton.Text = "CLICK";
+            this.testButton.UseVisualStyleBackColor = true;
+            this.testButton.Click += new System.EventHandler(this.testButton_Click);
+            // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.testButton);
+            this.Controls.Add(this.dayDateTimePicker);
+            this.Controls.Add(this.monthDateTimePicker);
+            this.Controls.Add(this.yearDateTimePicker);
             this.Controls.Add(this.pathLabel);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.uploadButton);
@@ -150,5 +196,9 @@
         private System.Windows.Forms.Button uploadButton;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.Label pathLabel;
+        private System.Windows.Forms.DateTimePicker yearDateTimePicker;
+        private System.Windows.Forms.DateTimePicker monthDateTimePicker;
+        private System.Windows.Forms.DateTimePicker dayDateTimePicker;
+        private System.Windows.Forms.Button testButton;
     }
 }

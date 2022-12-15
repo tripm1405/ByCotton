@@ -22,6 +22,8 @@ namespace ByCotton
 
             amountNumericUpDown.Value = amount;
             priceNumericUpDown.Value = total;
+            amountNumericUpDown.Maximum = amount;
+            amountNumericUpDown.Minimum = 1;
             this.code = code;
         }
 

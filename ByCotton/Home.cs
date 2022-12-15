@@ -30,7 +30,10 @@ namespace ByCotton
 
         private void loadData()
         {
-            string query = "SELECT code, name, image FROM Product";
+            string query = 
+                "SELECT code, name, image " +
+                "FROM Product " +
+                "WHERE amount > 0";
 
             SqlConnection cn = new SqlConnection(Global.DATABASE);
             SqlCommand cmd = new SqlCommand(query, cn);
@@ -76,6 +79,11 @@ namespace ByCotton
         {
             (new invoiceHistoryCus()).Show();
             this.Hide();
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -81,5 +81,14 @@ namespace ByCotton
                 MessageBox.Show(ex.Message, "File Already exits");
             }
         }
+
+        private void testButton_Click(object sender, EventArgs e)
+        {
+            string year = yearDateTimePicker.Text;
+            string month = monthDateTimePicker.Text;
+            string day = dayDateTimePicker.Text;
+
+            MessageBox.Show(year + ", " + month + ", " + day);
+        }
     }
 }

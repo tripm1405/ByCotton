@@ -63,6 +63,17 @@ namespace ByCotton
 
         private void orderButton_Click(object sender, EventArgs e)
         {
+            order();
+        }
+
+        private void invoiceButton_Click(object sender, EventArgs e)
+        {
+            (new invoiceHistoryCus()).Show();
+            this.Hide();
+        }
+
+        private void order()
+        {
             SqlCommand cmd;
             string query;
 
@@ -111,10 +122,14 @@ namespace ByCotton
             this.Hide();
         }
 
-        private void invoiceButton_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            (new invoiceHistoryCus()).Show();
-            this.Hide();
+            order();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            order();
         }
     }
 }
