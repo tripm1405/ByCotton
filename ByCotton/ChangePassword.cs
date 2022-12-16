@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,16 +25,40 @@ namespace ByCotton
             string newPassword = newPasswordTextBox.Text;
             string rePassword = rePasswordTextBox.Text;
 
-            if (oldPassword.Equals("") || newPassword.Equals(""))
+            Validation valid = new Validation();
+
+            Boolean flag = true;
+
+            flag &= valid.checkSpace(oldPassword);
+            if (flag == false)
             {
-                MessageBox.Show("HÃY NHẬP ĐẦY ĐỦ THÔNG TIN!");
+                MessageBox.Show("Hãy nhập mật khẩu cũ!");
                 return;
             }
 
+            flag &= valid.checkSpace(newPassword);
+            if (flag == false)
+            {
+                MessageBox.Show("Hãy nhập mật khẩu mới!");
+                return;
+            }
+            flag &= valid.checkLength(newPassword);
+            if (flag == false)
+            {
+                MessageBox.Show("Mật khẩu có độ dài quá ngắn!");
+                return;
+            }
+            flag &= valid.checkSpace(rePassword);
+            if (flag == false)
+            {
+                MessageBox.Show("Hãy nhập mật khẩu mới xác nhận!");
+                return;
+            }
+
+
             if ( !newPassword.Equals(rePassword) )
             {
-                MessageBox.Show("MẬT KHẨU NHẬP LẠI KHÔNG KHỚP!");
-                MessageBox.Show(newPassword + "\n" + rePassword);
+                MessageBox.Show("Mật khẩu xác nhận không khớp!");
                 return;
             }
 
