@@ -213,5 +213,10 @@ namespace ByCotton
             addressTextBox.Text = "";
             phoneTextBox.Text = "";
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
