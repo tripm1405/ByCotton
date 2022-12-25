@@ -120,7 +120,7 @@ GO
 
 CREATE TRIGGER refundAdd
 ON InvoiceDetail
-INSTEAD OF UPDATE
+AFTER UPDATE
 AS
 BEGIN
 	DECLARE @refund INT, @product INT;

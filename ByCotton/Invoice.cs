@@ -91,7 +91,6 @@ namespace ByCotton
                 iscontain = true;
                 for (int j = 0; j < invoiceDataGridView.Rows.Count; j++)
                 {
-                    MessageBox.Show(clone.Cells[0].Value + "," + invoiceDataGridView.Rows[j].Cells[0].Value);
                     row = invoiceDataGridView.Rows[j];
                     if (int.Parse(clone.Cells[0].Value.ToString()) == int.Parse(invoiceDataGridView.Rows[j].Cells[0].Value.ToString()))
                     {
@@ -248,8 +247,9 @@ namespace ByCotton
                 {
                     amount = int.Parse(row.Cells[2].Value.ToString());
                     if (amount < amountCurr) {
-                        productsDataGridView.Rows[e.RowIndex].Cells[2].Value = amount;
+                        invoiceDataGridView.Rows[e.RowIndex].Cells[2].Value = amount;
                     }
+                    return;
                 }
             }
         }

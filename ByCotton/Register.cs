@@ -37,7 +37,7 @@ namespace ByCotton
             string address = addressTextBox.Text;
             string phone = phoneTextBox.Text;
 
-           Validation valid = new Validation();
+            Validation valid = new Validation();
 
             Boolean flag = true;
             //check space

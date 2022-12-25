@@ -129,21 +129,18 @@ namespace ByCotton
         {
             DateTime dateTime = yearDateTimePicker.Value;
             yearLabel.Text = get_total_s(dateTime.ToString("yyyy") + "/01/01", dateTime.ToString("yyyy/MM/dd"));
-            MessageBox.Show(dateTime.ToString("yyyy") + "/01/01" + "\n" + dateTime.ToString("yyyy/MM/dd"));
         }
 
         private void monthDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             DateTime dateTime = monthDateTimePicker.Value;
             monthlabel.Text = get_total_s(dateTime.ToString("yyyy/MM") + "/01", dateTime.AddMonths(1).ToString("yyyy/MM") + "/01");
-            MessageBox.Show(dateTime.ToString("yyyy/MM") + "/01" + "\n" + dateTime.AddMonths(1).ToString("yyyy/MM") + "/01");
         }
 
         private void dayDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             DateTime dateTime = dayDateTimePicker.Value;
             dayLabel.Text = get_total_s(dateTime.ToString("yyyy/MM/dd"), dateTime.AddDays(1).ToString("yyyy/MM/dd"));
-            MessageBox.Show(dateTime.ToString("yyyy/MM/dd") + "\n" + dateTime.AddDays(1).ToString("yyyy/MM/dd"));
         }
     }
 }
